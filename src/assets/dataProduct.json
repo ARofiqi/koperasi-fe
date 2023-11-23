@@ -1,14 +1,20 @@
 [
   {
+    "id": "1",
     "name": "Minyak botol bimoli - 2L",
-    "price": 25000
+    "price": 25000,
+    "category": "sembako"
   },
   {
+    "id": "2",
     "name": "Telur Ayam Negeri",
-    "price": 5500
+    "price": 5500,
+    "category": "pakaian"
   },
   {
+    "id": "3",
     "name": "Indomie Goreng",
-    "price": 4000
+    "price": 4000,
+    "category": "minuman"
   }
 ]

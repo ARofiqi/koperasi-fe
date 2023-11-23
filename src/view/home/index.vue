@@ -10,28 +10,74 @@
         <font-awesome-icon class="w-6 h-6" :icon="['fas', 'cart-shopping']" style="color: #ffffff" />
       </div>
     </div>
-    <div class="flex gap-2 m-auto">
-      <div class="border-2 border-solid border-gray-300 rounded-md w-5/6 bg-white">
-        <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="w-1/6 text-gray-400" />
-        <input type="text" id="search" class="w-5/6 p-2 bg-inherit focus:outline-none" placeholder="search..." />
+    <div class="flex gap-1 m-auto">
+      <div class="border-2 border-solid border-gray-300 rounded-md w-4/6 bg-white">
+        <font-awesome-icon v-on="this.searchProducts" :icon="['fas', 'magnifying-glass']" class="w-1/6 text-gray-400"/>
+        <input v-model="search" type="text" id="search" @keyup.enter="searchProducts" class="w-5/6 p-2 bg-inherit focus:outline-none" placeholder="search..." />
       </div>
-      <button class="w-1/6 border-2 border-solid border-gray-300 rounded-md bg-white">
-        <font-awesome-icon :icon="['fas', 'filter']" class="text-gray-400" />
-      </button>
+      <select v-model="selectedCategory" id="category" class="w-2/6 border-2 border-solid border-gray-300 rounded-md bg-white focus:outline-none">
+        <option value="">
+          All category
+          <!-- <font-awesome-icon :icon="['fas', 'filter']" class="text-gray-400" /> -->
+        </option>
+        <option v-for="category in uniqueCategories" :key="category" :value="category">
+          {{ category }}
+        </option>
+      </select>
     </div>
     <div>
       <div class="flex justify-between mt-3">
         <p id="category">Sembako</p>
         <p id="seeAll">Lihat Semua</p>
       </div>
-      <div class="list-card mt-3 flex flex-col gap-3">
+
+      <div v-if="selectedCategory">
+        <div class="list-card mt-3 flex flex-col gap-3">
+          <Card v-for="data in filteredProducts" :key="data" :name="data.name" :price="data.price" />
+        </div>
+      </div>
+
+      <div class="list-card mt-3 flex flex-col gap-3" v-else-if="search">
+        <Card v-for="data in searchProducts" :key="data" :name="data.name" :price="data.price" />
+      </div>
+
+      <div class="list-card mt-3 flex flex-col gap-3" v-else>
         <Card v-for="data in dataProduct" :key="data" :name="data.name" :price="data.price" />
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script>
 import Card from "../../components/card.vue";
 import dataProduct from "../../assets/dataProduct.json";
+export default {
+  name: "homePage",
+  data() {
+    return {
+      dataProduct: dataProduct,
+      search: "",
+      selectedCategory: "",
+    };
+  },
+  components: {
+    Card,
+  },
+  computed: {
+    searchProducts() {
+      this.selectedCategory = ""
+      return this.dataProduct.filter((product) => product.name.toLowerCase().includes(this.search.toLowerCase()));
+    },
+    uniqueCategories() {
+      return [...new Set(this.dataProduct.map((product) => product.category))];
+    },
+    filteredProducts() {
+      if (this.selectedCategory) {
+        return this.dataProduct.filter((product) => product.category === this.selectedCategory);
+      } else {
+        return this.dataProduct;
+      }
+    },
+  },
+};
 </script>
