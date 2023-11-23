@@ -3,29 +3,58 @@
     <router-link :to="{ name: 'homepage' }">
       <font-awesome-icon :icon="['fas', 'arrow-left']" class="text-white" />
     </router-link>
-    <img src="../../../public/foto produk/minyak.png" alt="foto produk" class="w-2/3 mx-auto" />
+    <img :src="'../../assets/foto produk/'+this.name+'.png'" alt="foto produk" class="w-2/3 mx-auto" />
   </div>
   <div class="px-3 py-5">
-    <h2 class="font-semibold text-xl">Minyak Goreng Bimoli - 2L</h2>
+    <h2 class="font-semibold text-xl">{{ this.name }}</h2>
     <div class="border-b-2 border-solid border-gray-400 flex items-center justify-between pb-3">
       <div class="py-2">
         <button class="text-3xl px-2 text-primary">-</button>
         <span class="text-2xl border-2 border-solid border-gray-500 px-2 pb-1 rounded-lg">1</span>
         <button class="text-3xl px-2 text-primary">+</button>
       </div>
-      <p class="text-3xl font-semibold">Rp 25.000</p>
+      <p class="text-3xl font-semibold">Rp {{ this.price }}</p>
     </div>
     <div class="border-b-2 border-solid border-gray-400 pb-3">
       <h3 class="font-semibold py-3 text-lg">Product Detail</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sequi neque perferendis perspiciatis ab ipsam quae dolore labore sit doloremque nihil aliquam mollitia esse, est, nesciunt, sed id. Reiciendis, aliquam.</p>
+      <p>{{ this.detail }}</p>
     </div>
     <div class="flex items-center justify-between">
       <h3 class="font-semibold py-3 text-lg">Review</h3>
-      <Review />
+      <Review :score="this.score" />
+    </div>
+    <div class="bg-primary text-white flex items-center gap-5 justify-center p-3 rounded-lg">
+      <font-awesome-icon :icon="['fas', 'plus']" />
+      <h3 class="font-semibold text-xl">Masukan Keranjang</h3>
     </div>
   </div>
 </template>
 
-<script setup>
+<script>
 import Review from "../../components/review.vue";
+export default {
+  name: "ProductPage",
+  components: {
+    Review,
+  },
+  props: {
+    name: {
+      type: String,
+      default: "Unknow",
+    },
+    price: {
+      type: Number,
+      default: 0,
+    },
+    detail: {
+      type: String,
+      default:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, eveniet quas voluptatem nisi reiciendis repellendus possimus ullam eaque fuga laboriosam quidem corrupti mollitia nostrum placeat quasi maxime harum? Tenetur, minus?",
+    },
+    score: {
+      type: Number,
+      default: 0,
+    },
+  },
+};
 </script>

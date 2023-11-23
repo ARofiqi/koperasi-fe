@@ -7,7 +7,7 @@
           <p>Saldo</p>
           <p>Rp.350.000</p>
         </div>
-        <img src="../../../public/profil.jpg" alt="foto profil" class="w-16 h-16 bg-gray-500 rounded-full" />
+        <img src="/profil.jpg" alt="foto profil" class="w-16 h-16 bg-gray-500 rounded-full" />
       </div>
     </div>
     <div class="bg-white rounded-t-xl p-3">
