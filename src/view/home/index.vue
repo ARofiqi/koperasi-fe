@@ -12,7 +12,7 @@
     </div>
     <div class="flex gap-1 m-auto">
       <div class="border-2 border-solid border-gray-300 rounded-md w-4/6 bg-white">
-        <font-awesome-icon v-on="this.searchProducts" :icon="['fas', 'magnifying-glass']" class="w-1/6 text-gray-400"/>
+        <font-awesome-icon v-on="this.searchProducts" :icon="['fas', 'magnifying-glass']" class="w-1/6 text-gray-400" />
         <input v-model="search" type="text" id="search" @keyup.enter="searchProducts" class="w-5/6 p-2 bg-inherit focus:outline-none" placeholder="search..." />
       </div>
       <select v-model="selectedCategory" id="category" class="w-2/6 border-2 border-solid border-gray-300 rounded-md bg-white focus:outline-none">
@@ -27,29 +27,20 @@
     </div>
     <div>
       <div class="flex justify-between mt-3">
-        <p id="category">Sembako</p>
+        <p v-text="selectedCategory" v-if="selectedCategory"></p>
+        <p v-else>All category</p>
         <p id="seeAll">Lihat Semua</p>
       </div>
 
-      <div v-if="selectedCategory">
-        <div class="list-card mt-3 flex flex-col gap-3">
-          <Card v-for="data in filteredProducts" :key="data" :name="data.name" :price="data.price" />
-        </div>
-      </div>
-
-      <div class="list-card mt-3 flex flex-col gap-3" v-else-if="search">
-        <Card v-for="data in searchProducts" :key="data" :name="data.name" :price="data.price" />
-      </div>
-
-      <div class="list-card mt-3 flex flex-col gap-3" v-else>
-        <Card v-for="data in dataProduct" :key="data" :name="data.name" :price="data.price" />
-      </div>
+      <ProductList :dataList="filteredProducts" v-if="selectedCategory" />
+      <ProductList :dataList="searchProducts" v-else-if="search" />
+      <ProductList :dataList="dataProduct" v-else />
     </div>
   </div>
 </template>
 
 <script>
-import Card from "../../components/card.vue";
+import ProductList from "../../components/productList.vue";
 import dataProduct from "../../assets/dataProduct.json";
 export default {
   name: "homePage",
@@ -61,11 +52,11 @@ export default {
     };
   },
   components: {
-    Card,
+    ProductList,
   },
   computed: {
     searchProducts() {
-      this.selectedCategory = ""
+      this.selectedCategory = "";
       return this.dataProduct.filter((product) => product.name.toLowerCase().includes(this.search.toLowerCase()));
     },
     uniqueCategories() {

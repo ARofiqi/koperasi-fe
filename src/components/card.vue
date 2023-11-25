@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{ name: 'product' }">
+  <router-link :to="{ name: 'product', params: { id: this.id } }">
     <div id="card">
       <img :src="'/foto produk/' + name + '.png'" alt="foto produk" class="h-auto w-2/5 p-5" />
       <div class="w-3/5 py-2 px-3 flex flex-col justify-between">
@@ -17,6 +17,7 @@
 export default {
   name: "Card",
   props: {
+    id: String,
     name: String,
     price: Number,
     isAdd: {
