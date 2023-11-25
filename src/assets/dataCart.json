@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "Minyak botol bimoli - 2L",
+    "price": 25000,
+    "quantity": 20
+  },
+  {
+    "id": "2",
+    "name": "Telur Ayam Negeri",
+    "price": 5500,
+    "quantity": 15
+  },
+  {
+    "id": "3",
+    "name": "Indomie Goreng",
+    "price": 4000,
+    "quantity": 30
+  }
+]

@@ -5,9 +5,11 @@
       <router-link :to="{ name: 'profil' }"><img src="profil.jpg" alt="foto profil" class="w-6 h-6 bg-gray-400 rounded-full" /></router-link>
       <div class="flex gap-5">
         <router-link :to="{ name: 'setting' }">
-          <font-awesome-icon class="w-6 h-6" :icon="['fas', 'gear']" style="color: #ffffff" />
+          <font-awesome-icon class="w-6 h-6 text-white" :icon="['fas', 'gear']" />
         </router-link>
-        <font-awesome-icon class="w-6 h-6" :icon="['fas', 'cart-shopping']" style="color: #ffffff" />
+        <router-link :to="{ name: 'cart' }">
+          <font-awesome-icon class="w-6 h-6 text-white" :icon="['fas', 'cart-shopping']" />
+        </router-link>
       </div>
     </div>
     <div class="flex gap-1 m-auto">
@@ -20,9 +22,7 @@
           All category
           <!-- <font-awesome-icon :icon="['fas', 'filter']" class="text-gray-400" /> -->
         </option>
-        <option v-for="category in uniqueCategories" :key="category" :value="category">
-          {{ category }}
-        </option>
+        <option v-for="category in uniqueCategories" :key="category" :value="category" v-text="category"></option>
       </select>
     </div>
     <div>
@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import ProductList from "../../components/productList.vue";
-import dataProduct from "../../assets/dataProduct.json";
+import ProductList from "@/components/productList.vue";
+import dataProduct from "@/assets/dataProduct.json";
 export default {
   name: "homePage",
   data() {

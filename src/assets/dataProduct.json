@@ -3,18 +3,24 @@
     "id": "1",
     "name": "Minyak botol bimoli - 2L",
     "price": 25000,
-    "category": "sembako"
+    "category": "sembako",
+    "detail":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. Assumenda doloribus dolorem ducimus illo, voluptatum nostrum nesciunt.",
+    "rating": 4
   },
   {
     "id": "2",
     "name": "Telur Ayam Negeri",
     "price": 5500,
-    "category": "pakaian"
+    "category": "pakaian",
+    "detail":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. Assumenda doloribus dolorem ducimus illo, voluptatum nostrum nesciunt.",
+    "rating": 2
   },
   {
     "id": "3",
     "name": "Indomie Goreng",
     "price": 4000,
-    "category": "minuman"
+    "category": "minuman",
+    "detail":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. Assumenda doloribus dolorem ducimus illo, voluptatum nostrum nesciunt.",
+    "rating": 5
   }
 ]

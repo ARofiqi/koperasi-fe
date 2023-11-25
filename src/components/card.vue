@@ -6,7 +6,7 @@
         <h2 class="text-lg font-semibold">{{ this.name }}</h2>
         <div class="flex justify-between py-2">
           <p class="text-gray-600 font-medium">Rp.{{ this.price }}</p>
-          <div class="px-2 py-1 bg-green-700 text-white" v-if="this.isAdd">+</div>
+          <!-- <div class="px-2 py-1 bg-green-700 text-white" v-if="this.isAdd">+</div> -->
         </div>
       </div>
     </div>
@@ -20,10 +20,10 @@ export default {
     id: String,
     name: String,
     price: Number,
-    isAdd: {
-      type: Boolean,
-      default: true,
-    },
+    // isAdd: {
+    //   type: Boolean,
+    //   default: true,
+    // },
   },
 };
 </script>

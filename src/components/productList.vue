@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import dataProduct from "../assets/dataProduct.json";
+import dataProduct from "@/assets/dataProduct.json";
 import Card from "./card.vue";
 export default {
   name: "ProductList",

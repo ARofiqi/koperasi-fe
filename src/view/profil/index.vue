@@ -27,19 +27,26 @@
       </div>
       <div class="pt-5">
         <h3 class="font-bold">Produk Yang Sering Dibeli</h3>
-        <div class="list-card mt-3 flex flex-col gap-3">
-          <Card title="Minyak Botol Bimoli - 2L" :price="20000" :isAdd="false" />
-          <Card title="Minyak Botol Bimoli - 2L" :price="20000" :isAdd="false" />
-          <Card title="Minyak Botol Bimoli - 2L" :price="20000" :isAdd="false" />
-          <Card title="Minyak Botol Bimoli - 2L" :price="20000" :isAdd="false" />
-          <Card title="Minyak Botol Bimoli - 2L" :price="20000" :isAdd="false" />
-        </div>
+        <ProductList :dataList="data" />
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
-import Chart from "../../components/chart.vue";
-import Card from "../../components/card.vue";
+<script>
+import Chart from "@/components/chart.vue";
+import ProductList from "@/components/productList.vue";
+import dataProduct from "@/assets/dataProduct.json";
+export default {
+  name: "ProfilPage",
+  data() {
+    return {
+      data: dataProduct,
+    };
+  },
+  components: {
+    ProductList,
+    Chart,
+  },
+};
 </script>

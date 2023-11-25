@@ -1,0 +1,21 @@
+import axios from 'axios';
+
+const baseURL = 'https://api.example.com';
+
+const axiosInstance = axios.create({
+  baseURL: baseURL,
+  timeout: 5000, 
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+axiosInstance.interceptors.response.use(
+  response => response.data,
+  error => {
+    console.error('Axios error:', error);
+    return Promise.reject(error);
+  }
+);
+
+export default axiosInstance;

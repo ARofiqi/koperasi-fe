@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import homepage from "../view/home/index.vue";
-import pesanan from "../view/pesanan/index.vue";
-import notification from "../view/notification/index.vue";
-import profil from "../view/profil/index.vue";
-import setting from "../view/setting/index.vue";
-import product from "../view/product/index.vue";
+import homepage from "@/view/home/index.vue";
+import pesanan from "@/view/pesanan/index.vue";
+import notification from "@/view/notification/index.vue";
+import profil from "@/view/profil/index.vue";
+import setting from "@/view/setting/index.vue";
+import product from "@/view/product/index.vue";
+import cart from "@/view/cart/index.vue";
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
     path: "/product/:id",
     name: "product",
     component: product,
+  },
+  {
+    path: "/cart",
+    name: "cart",
+    component: cart,
   },
 ];
 
