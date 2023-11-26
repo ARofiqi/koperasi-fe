@@ -25,7 +25,7 @@ const routes = [
     component: notification,
   },
   {
-    path: "/profil",
+    path: "/profil/:id",
     name: "profil",
     component: profil,
   },

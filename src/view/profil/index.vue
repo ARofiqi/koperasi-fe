@@ -3,9 +3,9 @@
     <div class="py-4 px-3">
       <div class="flex justify-between">
         <div class="text-white">
-          <h2 class="font-semibold text-xl">Hi Abdurrahman</h2>
+          <h2 class="font-semibold text-xl">Hi {{ dataUser.name }}</h2>
           <p>Saldo</p>
-          <p>Rp.350.000</p>
+          <p>Rp {{ dataUser.saldo }}</p>
         </div>
         <img src="/profil.jpg" alt="foto profil" class="w-16 h-16 bg-gray-500 rounded-full" />
       </div>
@@ -18,16 +18,16 @@
       <div class="border-b-2 border-solid border-gray-300 flex gap-6 py-5">
         <div class="bg-gray-200 flex-grow rounded-lg p-3">
           <h3 class="font-bold">Pemasukan</h3>
-          <p class="text-red-600 font-bold">Rp 400.000</p>
+          <p class="text-red-600 font-bold">Rp {{ dataUser.pemasukan }}</p>
         </div>
         <div class="bg-gray-200 flex-grow rounded-lg p-3">
           <h3 class="font-bold">Pengeluaran</h3>
-          <p class="text-green-600 font-bold">Rp 40.000</p>
+          <p class="text-green-600 font-bold">Rp {{ dataUser.pengeluaran }}</p>
         </div>
       </div>
       <div class="pt-5">
         <h3 class="font-bold">Produk Yang Sering Dibeli</h3>
-        <ProductList :dataList="data" />
+        <ProductList :dataList="mostProduct" />
       </div>
     </div>
   </div>
@@ -37,16 +37,34 @@
 import Chart from "@/components/chart.vue";
 import ProductList from "@/components/productList.vue";
 import dataProduct from "@/assets/dataProduct.json";
+import dataProfil from "@/assets/dataProfil.json";
 export default {
   name: "ProfilPage",
   data() {
     return {
       data: dataProduct,
+      dataUser: dataProfil,
+      mostProduct: [],
     };
   },
   components: {
     ProductList,
     Chart,
+  },
+  created() {
+    this.createNewDataList();
+  },
+  methods: {
+    createNewDataList() {
+      const listId = this.dataUser.mostProduct;
+      listId.forEach((id) => {
+        this.data.forEach((item) => {
+          if (item.id === id) {
+            this.mostProduct.push(item);
+          }
+        });
+      });
+    },
   },
 };
 </script>

@@ -2,7 +2,7 @@
   <div class="bg-primary absolute w-full h-20 rounded-b-2xl -z-50"></div>
   <div class="px-4 py-3">
     <div class="flex gap-5 justify-between pb-4">
-      <router-link :to="{ name: 'profil' }"><img src="profil.jpg" alt="foto profil" class="w-6 h-6 bg-gray-400 rounded-full" /></router-link>
+      <router-link :to="{ name: 'profil', params: { id: '1' } }"><img src="profil.jpg" alt="foto profil" class="w-6 h-6 bg-gray-400 rounded-full" /></router-link>
       <div class="flex gap-5">
         <router-link :to="{ name: 'setting' }">
           <font-awesome-icon class="w-6 h-6 text-white" :icon="['fas', 'gear']" />

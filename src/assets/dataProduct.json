@@ -4,23 +4,143 @@
     "name": "Minyak botol bimoli - 2L",
     "price": 25000,
     "category": "sembako",
-    "detail":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. Assumenda doloribus dolorem ducimus illo, voluptatum nostrum nesciunt.",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 4
   },
   {
     "id": "2",
     "name": "Telur Ayam Negeri",
     "price": 5500,
-    "category": "pakaian",
-    "detail":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. Assumenda doloribus dolorem ducimus illo, voluptatum nostrum nesciunt.",
+    "category": "pangan",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 2
   },
   {
     "id": "3",
     "name": "Indomie Goreng",
     "price": 4000,
+    "category": "pangan",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 5
+  },
+  {
+    "id": "4",
+    "name": "Gula Pasir - 1kg",
+    "price": 12000,
+    "category": "sembako",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 3
+  },
+  {
+    "id": "5",
+    "name": "Susu Ultra - 1L",
+    "price": 18000,
     "category": "minuman",
-    "detail":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. Assumenda doloribus dolorem ducimus illo, voluptatum nostrum nesciunt.",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 4
+  },
+  {
+    "id": "6",
+    "name": "Beras Premium - 5kg",
+    "price": 50000,
+    "category": "pangan",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 5
+  },
+  {
+    "id": "7",
+    "name": "Sabun Mandi - Varian Aroma",
+    "price": 7500,
+    "category": "kebutuhan rumah tangga",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 3
+  },
+  {
+    "id": "8",
+    "name": "Teh Celup - 25pcs",
+    "price": 15000,
+    "category": "minuman",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 4
+  },
+  {
+    "id": "9",
+    "name": "Kopi Bubuk - 200g",
+    "price": 22000,
+    "category": "minuman",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 4
+  },
+  {
+    "id": "10",
+    "name": "Sikat Gigi - Paket Hemat",
+    "price": 9000,
+    "category": "kebutuhan rumah tangga",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 3
+  },
+  {
+    "id": "11",
+    "name": "Roti Tawar - 500g",
+    "price": 8000,
+    "category": "pangan",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 4
+  },
+  {
+    "id": "12",
+    "name": "Shampoo Anti-Dandruff",
+    "price": 15000,
+    "category": "kebutuhan rumah tangga",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 4
+  },
+  {
+    "id": "13",
+    "name": "Ikan Sarden Kalengan",
+    "price": 7000,
+    "category": "pangan",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 5
+  },
+  {
+    "id": "14",
+    "name": "Pasta Gigi Anak - Rasa Buah",
+    "price": 6000,
+    "category": "kebutuhan rumah tangga",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 3
+  },
+  {
+    "id": "15",
+    "name": "Susu Kental Manis - 400g",
+    "price": 12000,
+    "category": "minuman",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 5
+  },
+  {
+    "id": "16",
+    "name": "Tissue Wajah - Paket Isi Ulang",
+    "price": 10000,
+    "category": "kebutuhan rumah tangga",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 3
+  },
+  {
+    "id": "17",
+    "name": "Biskuit Coklat - 300g",
+    "price": 9500,
+    "category": "snack",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
+    "rating": 4
+  },
+  {
+    "id": "18",
+    "name": "Lampu LED Hemat Energi",
+    "price": 30000,
+    "category": "kebutuhan rumah tangga",
+    "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 5
   }
 ]

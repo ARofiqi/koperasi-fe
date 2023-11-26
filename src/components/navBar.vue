@@ -12,7 +12,7 @@
       <font-awesome-icon :icon="['fas', 'bell']" />
       Notification
     </router-link>
-    <router-link :to="{ name: 'profil' }" class="flex flex-col grow text-center p-3">
+    <router-link :to="{ name: 'profil', params: { id: '1' } }" class="flex flex-col grow text-center p-3">
       <font-awesome-icon :icon="['fas', 'user']" />
       Profil
     </router-link>
