@@ -27,8 +27,10 @@
     </div>
     <div>
       <div class="flex justify-between mt-3">
-        <p v-text="selectedCategory" v-if="selectedCategory"></p>
-        <p v-else>All category</p>
+        <div>
+          <p v-text="selectedCategory" v-if="selectedCategory"></p>
+          <p v-else>All category</p>
+        </div>
         <p id="seeAll">Lihat Semua</p>
       </div>
 

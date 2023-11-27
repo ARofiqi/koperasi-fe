@@ -7,12 +7,24 @@ import profil from "@/view/profil/index.vue";
 import setting from "@/view/setting/index.vue";
 import product from "@/view/product/index.vue";
 import cart from "@/view/cart/index.vue";
+import loginPage from "@/view/login/index.vue";
+import signupPage from "@/view/signup/index.vue";
 
 const routes = [
   {
     path: "/",
     name: "homepage",
     component: homepage,
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: loginPage,
+  },
+  {
+    path: "/signup",
+    name: "signup",
+    component: signupPage,
   },
   {
     path: "/pesanan",
