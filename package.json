@@ -18,6 +18,7 @@
     "billboard.js": "^3.10.3",
     "postcss": "^8",
     "tailwindcss": "^3",
+    "vee-validate": "^4.12.0",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   },
