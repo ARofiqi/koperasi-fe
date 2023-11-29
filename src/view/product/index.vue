@@ -1,8 +1,10 @@
 <template>
   <div v-if="product">
+    <!-- <Notification massage="Berhasi untuk mengorder product" tipe="success" v-show="isOrderSuccess" />
+    <Notification massage="Gagal untuk mengorder product" tipe="failed" v-show="isOrderSuccess" /> -->
     <div class="bg-gray-400 p-3 rounded-b-xl shadow-lg">
-      <router-link :to="{ name: 'homepage' }" >
-        <font-awesome-icon :icon="['fas', 'arrow-left']" class="text-white " />
+      <router-link :to="{ name: 'homepage' }">
+        <font-awesome-icon :icon="['fas', 'arrow-left']" class="text-white" />
       </router-link>
       <img :src="'/foto produk/' + this.product.name + '.png'" alt="foto produk" class="w-2/3 mx-auto" />
     </div>
@@ -27,28 +29,34 @@
         <h3 class="font-semibold py-3 text-lg">Review</h3>
         <Review :rating="this.product.rating" />
       </div>
-      <div class="bg-primary text-white flex items-center gap-5 justify-center p-3 rounded-lg">
+      <button @click="orderProduct" class="bg-primary text-white flex items-center gap-5 justify-center w-full p-3 rounded-lg">
         <font-awesome-icon :icon="['fas', 'plus']" />
         <h3 class="font-semibold text-xl">Masukan Keranjang</h3>
-      </div>
+      </button>
     </div>
   </div>
 </template>
 
 <script>
 import Review from "@/components/review.vue";
+import Notification from "@/components/notification.vue";
 import products from "@/assets/dataProduct.json";
-import axios from "@/axios";
+import Swal from "sweetalert2";
+// import axios from "@/axios";
 export default {
   name: "ProductPage",
   data() {
     return {
       product: null,
       quantity: 0,
+      totalHarga: 0,
+      order: null,
+      isOrderSuccess: false,
     };
   },
   components: {
     Review,
+    Notification,
   },
   methods: {
     fetchProductDetails() {
@@ -59,17 +67,42 @@ export default {
       }, {});
       this.product = data[productId];
     },
+    orderProduct() {
+      try {
+        const data = {
+          id: this.product.id,
+          name: this.product.name,
+          price: this.product.price,
+          quantity: this.quantity,
+          totalHarga: this.product.price * this.quantity,
+        };
+        this.order = data;
+        console.log(this.order);
+        Swal.fire({
+          icon: "success",
+          title: "Produk berhasil ditambahkan ke keranjang",
+          timer: 1500,
+        });
+      } catch (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Produk Gagal ditambahkan ke keranjang",
+          timer: 1500,
+        });
+        console.log(error);
+      }
+    },
   },
   mounted() {
-    this.fetchProductDetails(),
-      axios
-        .get("/endpoint")
-        .then((response) => {
-          this.data = response;
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-        });
+    this.fetchProductDetails();
+    // axios
+    //   .get("/endpoint")
+    //   .then((response) => {
+    //     this.data = response;
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error fetching data:", error);
+    //   });
   },
 };
 </script>

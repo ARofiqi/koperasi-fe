@@ -4,16 +4,6 @@ import "./style.css";
 import App from "./App.vue";
 import router from "./routers";
 
-// import { required, email, defineRule, configure } from "vee-validate";
-// defineRule("required", required);
-// defineRule("email", email);
-// configure({
-//   generateMessage: (context) => {
-//     return context.message;
-//   },
-//   validateOnInput: true,
-// });
-
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
