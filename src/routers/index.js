@@ -3,13 +3,20 @@ import { createRouter, createWebHistory } from "vue-router";
 import homepage from "@/view/home/index.vue";
 import pesanan from "@/view/pesanan/index.vue";
 import notification from "@/view/notification/index.vue";
-import profil from "@/view/profil/index.vue";
 import setting from "@/view/setting/index.vue";
 import product from "@/view/product/index.vue";
 import cart from "@/view/cart/index.vue";
 import loginPage from "@/view/login/index.vue";
 import signupPage from "@/view/signup/index.vue";
 
+import profil from "@/view/profil/index.vue";
+import profilEdit from "@/view/profil/edit.vue";
+
+import settingProfil from "@/view/setting/profil.vue";
+import settingLocation from "@/view/setting/location.vue";
+import settingShare from "@/view/setting/share.vue";
+import settingSupport from "@/view/setting/support.vue";
+import settingLogout from "@/view/setting/logout.vue";
 const routes = [
   {
     path: "/",
@@ -42,9 +49,39 @@ const routes = [
     component: profil,
   },
   {
+    path: "/profil/edit",
+    name: "profilEdit",
+    component: profilEdit,
+  },
+  {
     path: "/setting",
     name: "setting",
     component: setting,
+  },
+  {
+    path: "/setting/profil",
+    name: "settingProfil",
+    component: settingProfil,
+  },
+  {
+    path: "/setting/location",
+    name: "settingLocation",
+    component: settingLocation,
+  },
+  {
+    path: "/setting/logout",
+    name: "settingLogout",
+    component: settingLogout,
+  },
+  {
+    path: "/setting/share",
+    name: "settingShare",
+    component: settingShare,
+  },
+  {
+    path: "/setting/support",
+    name: "settingSupport",
+    component: settingSupport,
   },
   {
     path: "/product/:id",

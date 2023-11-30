@@ -26,11 +26,7 @@ export default {
     id: String,
     name: String,
     price: Number,
-    // isAdd: {
-    //   type: Boolean,
-    //   default: true,
-    // },
-  },
+  },  
   methods: {
     addToCart: () => {
       Swal.fire("SweetAlert2 is working!");
