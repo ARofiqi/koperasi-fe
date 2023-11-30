@@ -18,7 +18,7 @@
         </div>
         <div class="text-right">
           <p class="text-3xl font-semibold">Rp {{ this.product.price }}</p>
-          <p v-if="quantity > 0">{{ this.quantity }} x {{ this.product.price }} = Rp.{{ this.quantity * this.product.price }}</p>
+          <p v-if="quantity > 1">{{ this.quantity }} x {{ this.product.price }} = Rp.{{ this.quantity * this.product.price }}</p>
         </div>
       </div>
       <div class="border-b-2 border-solid border-gray-400 pb-3">
@@ -39,7 +39,6 @@
 
 <script>
 import Review from "@/components/review.vue";
-import Notification from "@/components/notification.vue";
 import products from "@/assets/dataProduct.json";
 import Swal from "sweetalert2";
 // import axios from "@/axios";
@@ -48,15 +47,14 @@ export default {
   data() {
     return {
       product: null,
-      quantity: 0,
+      quantity: 1,
       totalHarga: 0,
       order: null,
-      isOrderSuccess: false,
+      isOrder: false,
     };
   },
   components: {
     Review,
-    Notification,
   },
   methods: {
     fetchProductDetails() {

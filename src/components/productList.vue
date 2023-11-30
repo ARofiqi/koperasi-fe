@@ -5,15 +5,9 @@
 </template>
 
 <script>
-import dataProduct from "@/assets/dataProduct.json";
 import Card from "./card.vue";
 export default {
   name: "ProductList",
-  data() {
-    return {
-      data: dataProduct,
-    };
-  },
   props: {
     dataList: Array,
   },
