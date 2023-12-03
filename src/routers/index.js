@@ -17,7 +17,13 @@ import settingLocation from "@/view/setting/location.vue";
 import settingShare from "@/view/setting/share.vue";
 import settingSupport from "@/view/setting/support.vue";
 import settingLogout from "@/view/setting/logout.vue";
+
+import chart from "@/components/chart.vue";
 const routes = [
+  {
+    path: "/chart",
+    component: chart,
+  },
   {
     path: "/",
     name: "homepage",
