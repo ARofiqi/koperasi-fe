@@ -3,8 +3,8 @@
     <!-- <Notification massage="Berhasi untuk mengorder product" tipe="success" v-show="isOrderSuccess" />
     <Notification massage="Gagal untuk mengorder product" tipe="failed" v-show="isOrderSuccess" /> -->
     <div class="bg-gray-400 p-3 rounded-b-xl shadow-lg">
-      <Back class="text-white"/>
-      <img :src="'/foto produk/' + this.product.name + '.png'" alt="foto produk" class="w-2/3 mx-auto" />
+      <Back class="text-white" />
+      <img :src="'/foto produk/' + this.product.name + '.png'" alt="foto produk" @error="handleImageError" class="w-2/3 mx-auto" />
     </div>
     <div class="px-3 py-5">
       <h2 class="font-semibold text-xl">{{ this.product.name }}</h2>
@@ -54,7 +54,7 @@ export default {
   },
   components: {
     Review,
-    Back
+    Back,
   },
   methods: {
     fetchProductDetails() {
@@ -89,6 +89,9 @@ export default {
         });
         console.log(error);
       }
+    },
+    handleImageError(event) {
+      event.target.src = "/foto produk/unknow.png";
     },
   },
   mounted() {

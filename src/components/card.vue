@@ -2,7 +2,7 @@
   <router-link :to="{ name: 'product', params: { id: this.id } }">
     <div id="card">
       <div class="h-auto w-2/5 p-5">
-        <img :src="'/foto produk/' + name + '.png'" alt="foto produk" class="" />
+        <img :src="'/foto produk/' + name + '.png'" alt="foto produk" class="" @error="handleImageError" />
       </div>
       <div class="w-3/5 py-2 px-3 flex flex-col justify-between gap-2">
         <h2 class="text-lg font-semibold">{{ this.name }}</h2>
@@ -24,12 +24,18 @@ export default {
   name: "Card",
   props: {
     id: String,
-    name: String,
+    name: {
+      type: String,
+      default: "unknow",
+    },
     price: Number,
-  },  
+  },
   methods: {
     addToCart: () => {
-      Swal.fire("SweetAlert2 is working!");
+      Swal.fire("Product berhasil ditambahkan ke keranjang");
+    },
+    handleImageError(event) {
+      event.target.src = "/foto produk/unknow.png";
     },
   },
 };
