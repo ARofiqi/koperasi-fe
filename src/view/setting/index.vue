@@ -1,8 +1,6 @@
 <template>
   <div class="bg-primary p-3 rounded-b-2xl shadow-lg">
-    <router-link :to="{ name: 'homepage' }">
-      <font-awesome-icon :icon="['fas', 'arrow-left']" class="text-white" />
-    </router-link>
+    <Back class="text-white"/>
     <h1 class="text-center text-2xl text-white">Setting</h1>
     <div class="flex justify-around align-middle items-center my-5 text-white">
       <router-link :to="{ name: 'profil', params: { id: '1' } }">
@@ -41,10 +39,12 @@
 
 <script>
 import CardSetting from "@/components/cardSetting.vue";
+import Back from "@/components/back.vue";
 export default {
   name: "SettingPage",
   components: {
     CardSetting,
+    Back
   },
 };
 </script>

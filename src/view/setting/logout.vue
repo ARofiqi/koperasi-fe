@@ -1,6 +1,14 @@
 <template>
-  <router-link :to="{ name: 'setting' }">
-    <font-awesome-icon :icon="['fas', 'arrow-left']" class="text-black" />
-  </router-link>
+  <Back class="text-black" />
   <div>halaman logout</div>
 </template>
+
+
+<script>
+import Back from "@/components/back.vue";
+export default {
+  components: {
+    Back,
+  },
+};
+</script>
