@@ -3,9 +3,7 @@
     <!-- <Notification massage="Berhasi untuk mengorder product" tipe="success" v-show="isOrderSuccess" />
     <Notification massage="Gagal untuk mengorder product" tipe="failed" v-show="isOrderSuccess" /> -->
     <div class="bg-gray-400 p-3 rounded-b-xl shadow-lg">
-      <router-link :to="{ name: 'homepage' }">
-        <font-awesome-icon :icon="['fas', 'arrow-left']" class="text-white" />
-      </router-link>
+      <Back class="text-white"/>
       <img :src="'/foto produk/' + this.product.name + '.png'" alt="foto produk" class="w-2/3 mx-auto" />
     </div>
     <div class="px-3 py-5">
@@ -40,6 +38,7 @@
 <script>
 import Review from "@/components/review.vue";
 import products from "@/assets/dataProduct.json";
+import Back from "@/components/back.vue";
 import Swal from "sweetalert2";
 // import axios from "@/axios";
 export default {
@@ -55,6 +54,7 @@ export default {
   },
   components: {
     Review,
+    Back
   },
   methods: {
     fetchProductDetails() {

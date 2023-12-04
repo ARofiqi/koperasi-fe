@@ -1,5 +1,5 @@
 <template>
-  <div class="m-2 p-2 h-52">
+  <div class="h-64">
     <Line v-if="loaded" id="my-chart-id" :options="chartOptions" :data="chartData" />
   </div>
 </template>
@@ -16,19 +16,19 @@ export default {
     return {
       loaded: true,
       chartData: {
-        labels: ["January", "February", "March", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+        labels: this.labels,
         datasets: [
           {
-            label: "saldo masuk",
+            label: this.data1.title,
             borderColor: "rgb(0, 225, 0)",
             backgroundColor: "rgb(0, 225, 0)",
-            data: [23, 12, 45, 8, 37, 5, 19, 42, 14, 29, 31, 6],
+            data: this.data1.data,
           },
           {
-            label: "saldo keluar",
+            label: this.data2.title,
             borderColor: "rgb(225, 0,0)",
             backgroundColor: "rgb(225, 0,0)",
-            data: [7, 33, 18, 49, 22, 4, 41, 11, 28, 36, 14, 9],
+            data: this.data2.data,
           },
         ],
       },
@@ -38,6 +38,11 @@ export default {
       },
     };
   },
+  props: {
+    labels: Array,
+    data1: Object,
+    data2: Object,
+  }
   // async mounted () {
   //   this.loaded = false
 

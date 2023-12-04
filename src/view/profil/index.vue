@@ -13,7 +13,17 @@
     <div class="bg-white rounded-t-xl p-3">
       <div class="border-b-2 border-solid border-gray-300 py-5">
         <h2 class="pb-5">Grafik</h2>
-        <Chart />
+        <Chart
+          :labels="['January', 'February', 'March', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']"
+          :data1="{
+            title: 'saldo masuk',
+            data: [23, 12, 45, 8, 37, 5, 19, 42, 14, 29, 31, 6],
+          }"
+          :data2="{
+            title: 'saldo keluar',
+            data: [7, 33, 18, 49, 22, 4, 41, 11, 28, 36, 14, 9],
+          }"
+        />
       </div>
       <div class="border-b-2 border-solid border-gray-300 flex gap-6 py-5">
         <div class="bg-gray-200 flex-grow rounded-lg p-3">
