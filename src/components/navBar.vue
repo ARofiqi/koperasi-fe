@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="z-50">
     <router-link :to="{ name: 'homepage' }" class="flex flex-col grow text-center p-3">
       <font-awesome-icon :icon="['fas', 'house']" />
       Home

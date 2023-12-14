@@ -6,7 +6,9 @@
         <h2 class="text-lg font-semibold">{{ this.name }}</h2>
         <div class="flex justify-between py-2">
           <p class="text-gray-600 font-medium">{{ this.quantity }}</p>
-          <p class="text-gray-600 font-medium">Rp.{{ this.price }}</p>
+          <div>
+            <p class="text-gray-600 font-medium">Rp.{{ this.price }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -20,7 +22,7 @@ export default {
     id: String,
     name: String,
     price: Number,
-    quantity: Number
+    quantity: Number,
   },
 };
 </script>

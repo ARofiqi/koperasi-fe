@@ -25,6 +25,7 @@ import {
   faPlus,
   faMinus,
   faLock,
+  faTrashCan,
 } from "@fortawesome/free-solid-svg-icons";
 import { faEye, faEyeSlash, faNoteSticky } from "@fortawesome/free-regular-svg-icons";
 import { faFacebook, faGoogle, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -54,7 +55,8 @@ library.add(
   faGoogle,
   faFacebook,
   faWhatsapp,
-  faLock
+  faLock,
+  faTrashCan
 );
 createApp(App)
   .use(router)
