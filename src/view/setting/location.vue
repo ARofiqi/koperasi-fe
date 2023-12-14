@@ -1,6 +1,8 @@
 <template>
   <Back class="text-black" />
   <div>halaman location</div>
+  <div>
+  </div>
 </template>
 
 <script>

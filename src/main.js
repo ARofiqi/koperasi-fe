@@ -28,6 +28,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faEye, faEyeSlash, faNoteSticky } from "@fortawesome/free-regular-svg-icons";
 import { faFacebook, faGoogle, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import './registerServiceWorker'
 
 library.add(
   faCartShopping,
@@ -55,4 +56,7 @@ library.add(
   faWhatsapp,
   faLock
 );
-createApp(App).use(router).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
+createApp(App)
+  .use(router)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .mount("#app");
