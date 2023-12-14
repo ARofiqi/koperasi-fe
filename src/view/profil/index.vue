@@ -28,11 +28,11 @@
       <div class="border-b-2 border-solid border-gray-300 flex gap-6 py-5">
         <div class="bg-gray-200 flex-grow rounded-lg p-3">
           <h3 class="font-bold">Pemasukan</h3>
-          <p class="text-red-600 font-bold">Rp {{ dataUser.pemasukan }}</p>
+          <p class="text-green-600 font-bold">{{ formatRupiah(dataUser.pemasukan) }}</p>
         </div>
         <div class="bg-gray-200 flex-grow rounded-lg p-3">
           <h3 class="font-bold">Pengeluaran</h3>
-          <p class="text-green-600 font-bold">Rp {{ dataUser.pengeluaran }}</p>
+          <p class="text-red-600 font-bold">{{ formatRupiah(dataUser.pengeluaran) }}</p>
         </div>
       </div>
       <div class="pt-5">
@@ -74,6 +74,14 @@ export default {
           }
         });
       });
+    },
+    formatRupiah(num) {
+      const formatter = new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+      });
+
+      return formatter.format(num);
     },
   },
 };

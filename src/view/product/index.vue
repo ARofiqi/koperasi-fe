@@ -15,7 +15,7 @@
           <button class="text-3xl text-primary" @click="quantity++"><font-awesome-icon :icon="['fas', 'plus']" class="w-5 h-5" /></button>
         </div>
         <div class="text-right">
-          <p class="text-3xl font-semibold">Rp {{ this.product.price }}</p>
+          <p class="text-3xl font-semibold">{{ formatRupiah(this.product.price) }}</p>
           <p v-if="quantity > 1">{{ this.quantity }} x {{ this.product.price }} = Rp.{{ this.quantity * this.product.price }}</p>
         </div>
       </div>
@@ -92,6 +92,14 @@ export default {
     },
     handleImageError(event) {
       event.target.src = "/foto produk/unknow.png";
+    },
+    formatRupiah(num) {
+      const formatter = new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+      });
+
+      return formatter.format(num);
     },
   },
   mounted() {
