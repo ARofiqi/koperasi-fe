@@ -38,7 +38,7 @@
 </template>
 
 <script>
-// import dataCart from "@/assets/dataCart.json";
+import dataCart from "@/assets/dataCart.json";
 import CardProductCart from "@/components/cardProductCart.vue";
 import Back from "@/components/back.vue";
 import Swal from "sweetalert2";
@@ -47,44 +47,7 @@ export default {
   name: "cartPage",
   data() {
     return {
-      data: [
-        {
-          id: "1",
-          name: "Minyak botol bimoli - 2L",
-          price: 25000,
-          quantity: 20,
-        },
-        {
-          id: "2",
-          name: "Telur Ayam Negeri",
-          price: 5500,
-          quantity: 15,
-        },
-        {
-          id: "3",
-          name: "Indomie Goreng",
-          price: 4000,
-          quantity: 30,
-        },
-        {
-          id: "4",
-          name: "Minyak botol bimoli - 2L",
-          price: 25000,
-          quantity: 20,
-        },
-        {
-          id: "5",
-          name: "Telur Ayam Negeri",
-          price: 5500,
-          quantity: 15,
-        },
-        {
-          id: "6",
-          name: "Indomie Goreng",
-          price: 4000,
-          quantity: 30,
-        },
-      ],
+      data: dataCart
     };
   },
   components: {
