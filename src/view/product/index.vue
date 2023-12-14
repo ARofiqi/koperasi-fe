@@ -1,7 +1,5 @@
 <template>
   <div v-if="product">
-    <!-- <Notification massage="Berhasi untuk mengorder product" tipe="success" v-show="isOrderSuccess" />
-    <Notification massage="Gagal untuk mengorder product" tipe="failed" v-show="isOrderSuccess" /> -->
     <div class="bg-gray-400 p-3 rounded-b-xl shadow-lg">
       <Back class="text-white" />
       <img :src="'/foto produk/' + this.product.name + '.png'" alt="foto produk" @error="handleImageError" class="w-2/3 mx-auto" />
@@ -9,14 +7,14 @@
     <div class="px-3 py-5">
       <h2 class="font-semibold text-xl">{{ this.product.name }}</h2>
       <div class="border-b-2 border-solid border-gray-400 flex items-start justify-between pb-3">
-        <div class="py-2">
-          <button class="text-3xl text-primary focus:bg-none" @click="if (quantity > 0) quantity--;"><font-awesome-icon :icon="['fas', 'minus']" class="w-5 h-5" /></button>
-          <input class="w-14 text-center text-xl border-2 border-solid border-gray-500 mx-2 p-2 items-center rounded-lg" type="number" v-model="quantity" />
-          <button class="text-3xl text-primary" @click="quantity++"><font-awesome-icon :icon="['fas', 'plus']" class="w-5 h-5" /></button>
+        <div class="py-2 flex items-center">
+          <button class="text-3xl text-primary focus:bg-none flex items-center" @click="if (quantity > 0) quantity--;"><font-awesome-icon :icon="['fas', 'minus']" class="w-4 h-4" /></button>
+          <input class="w-12 text-center text-xl border-2 border-solid border-gray-500 mx-2 p-1 items-center rounded-lg" type="number" v-model="quantity" />
+          <button class="text-3xl text-primary flex items-center" @click="quantity++"><font-awesome-icon :icon="['fas', 'plus']" class="w-4 h-4" /></button>
         </div>
         <div class="text-right">
           <p class="text-3xl font-semibold">{{ formatRupiah(this.product.price) }}</p>
-          <p v-if="quantity > 1">{{ this.quantity }} x {{ this.product.price }} = Rp.{{ this.quantity * this.product.price }}</p>
+          <p v-if="quantity > 1">{{ formatRupiah(this.product.price) }} x {{ this.quantity }}= {{ formatRupiah(this.quantity * this.product.price) }}</p>
         </div>
       </div>
       <div class="border-b-2 border-solid border-gray-400 pb-3">
