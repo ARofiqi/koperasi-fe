@@ -5,7 +5,7 @@
         <div class="text-white">
           <h2 class="font-semibold text-xl">Hi {{ dataUser.name }}</h2>
           <p>Saldo</p>
-          <p>Rp {{ dataUser.saldo }}</p>
+          <p>{{ formatRupiah(dataUser.saldo) }}</p>
         </div>
         <img src="/profil.jpg" alt="foto profil" class="w-16 h-16 bg-gray-500 rounded-full" />
       </div>
