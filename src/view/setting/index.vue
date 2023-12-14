@@ -1,6 +1,6 @@
 <template>
   <div class="bg-primary p-3 rounded-b-2xl shadow-lg">
-    <Back class="text-white"/>
+    <Back class="text-white" />
     <h1 class="text-center text-2xl text-white">Setting</h1>
     <div class="flex justify-around align-middle items-center my-5 text-white">
       <router-link :to="{ name: 'profil', params: { id: '1' } }">
@@ -10,13 +10,13 @@
         <h2 class="font-semibold">Abdurrahman</h2>
         <p class="text-sm">Abdurrahman21@gmail.com</p>
       </div>
-      <router-link :to="{ name: 'profilEdit' }">
+      <router-link :to="{ name: 'profilEdit', params: { id: '1' } }">
         <font-awesome-icon :icon="['fas', 'edit']" />
       </router-link>
     </div>
   </div>
   <div class="p-3">
-    <router-link :to="{ name: 'settingProfil' }">
+    <router-link :to="{ name: 'settingProfil', params: { id: '1' } }">
       <CardSetting :title="'Account'" :icon="['fas', 'user']" />
     </router-link>
     <router-link :to="{ name: 'notification' }">
@@ -44,7 +44,7 @@ export default {
   name: "SettingPage",
   components: {
     CardSetting,
-    Back
+    Back,
   },
 };
 </script>

@@ -50,7 +50,7 @@ const routes = [
     component: profil,
   },
   {
-    path: "/profil/edit",
+    path: "/profil/:id/edit",
     name: "profilEdit",
     component: profilEdit,
   },
@@ -60,7 +60,7 @@ const routes = [
     component: setting,
   },
   {
-    path: "/setting/profil",
+    path: "/setting/profil/:id",
     name: "settingProfil",
     component: settingProfil,
   },
