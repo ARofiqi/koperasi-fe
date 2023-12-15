@@ -1,23 +1,33 @@
 <template>
   <nav class="z-50">
-    <router-link :to="{ name: 'homepage' }" class="flex flex-col grow text-center p-3">
+    <router-link :to="{ name: 'homepage' }" :class="{ active: $route.path === '/' }" class="flex flex-col grow text-center p-3">
       <font-awesome-icon :icon="['fas', 'house']" />
       Home
     </router-link>
-    <router-link :to="{ name: 'pesanan' }" class="flex flex-col grow text-center p-3">
+    <router-link :to="{ name: 'cart' }" :class="{ active: isActive('/cart') }" class="flex flex-col grow text-center p-3">
       <font-awesome-icon :icon="['far', 'note-sticky']" />
       Pesanan
     </router-link>
-    <router-link :to="{ name: 'notification' }" class="flex flex-col grow text-center p-3">
+    <router-link :to="{ name: 'notification' }" :class="{ active: isActive('/notification') }" class="flex flex-col grow text-center p-3">
       <font-awesome-icon :icon="['fas', 'bell']" />
       Notification
     </router-link>
-    <router-link :to="{ name: 'profil', params: { id: '1' } }" class="flex flex-col grow text-center p-3">
+    <router-link :to="{ name: 'profil', params: { id: '1' } }" :class="{ active: isActive('/profil') }" class="flex flex-col grow text-center p-3">
       <font-awesome-icon :icon="['fas', 'user']" />
       Profil
     </router-link>
   </nav>
 </template>
+
+<script>
+export default {
+  methods: {
+    isActive(path) {
+      return this.$route.path.startsWith(path);
+    },
+  },
+};
+</script>
 
 <style scoped>
 nav {
@@ -33,5 +43,8 @@ nav {
   bottom: 0;
   right: 0;
   left: 0;
+}
+.active {
+  color: #2cb4f2;
 }
 </style>

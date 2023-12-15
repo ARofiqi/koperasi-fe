@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import homepage from "@/view/home/index.vue";
-import pesanan from "@/view/pesanan/index.vue";
 import notification from "@/view/notification/index.vue";
 import setting from "@/view/setting/index.vue";
 import product from "@/view/product/index.vue";
@@ -33,11 +32,6 @@ const routes = [
     path: "/signup",
     name: "signup",
     component: signupPage,
-  },
-  {
-    path: "/pesanan",
-    name: "pesanan",
-    component: pesanan,
   },
   {
     path: "/notification",

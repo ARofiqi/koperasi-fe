@@ -10,7 +10,6 @@
         <router-link :to="{ name: 'cart' }">
           <font-awesome-icon class="w-6 h-6 text-white" :icon="['fas', 'cart-shopping']" />
         </router-link>
-        <DownloadButton />
       </div>
     </div>
     <div class="flex gap-1 m-auto">
@@ -45,7 +44,7 @@
 <script>
 import ProductList from "@/components/productList.vue";
 import dataProduct from "@/assets/dataProduct.json";
-import DownloadButton from "@/components/downloadApp.vue";
+
 export default {
   name: "homePage",
   data() {
@@ -57,7 +56,6 @@ export default {
   },
   components: {
     ProductList,
-    DownloadButton,
   },
   computed: {
     searchProducts() {
