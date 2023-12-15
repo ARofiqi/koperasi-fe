@@ -19,9 +19,6 @@
     <router-link :to="{ name: 'settingProfil', params: { id: '1' } }">
       <CardSetting :title="'Account'" :icon="['fas', 'user']" />
     </router-link>
-    <router-link :to="{ name: 'notification' }">
-      <CardSetting :title="'Notification'" :icon="['fas', 'bell']" />
-    </router-link>
     <router-link :to="{ name: 'settingLocation' }">
       <CardSetting :title="'Location'" :icon="['fas', 'map-location']" />
     </router-link>

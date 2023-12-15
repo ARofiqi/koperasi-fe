@@ -14,7 +14,7 @@
     <font-awesome-icon class="w-6 h-6 text-black" :icon="['fas', 'magnifying-glass']" />
   </div>
   <div class="flex flex-col gap-3 p-3 rounded-md">
-    <CardForum v-for="(item, index) in data" :key="index" :name="item.name" :email="item.email" :description="item.description" />
+    <CardForum v-for="item in data" :key="item.id" :id="item.id" :name="item.name" :email="item.email" :description="item.description" />
   </div>
 </template>
 

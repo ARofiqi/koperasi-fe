@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import homepage from "@/view/home/index.vue";
+
 import forum from "@/view/forum/index.vue";
+import detailForum from "@/view/forum/detail.vue";
+
 import setting from "@/view/setting/index.vue";
 import product from "@/view/product/index.vue";
 import cart from "@/view/cart/index.vue";
@@ -37,6 +40,11 @@ const routes = [
     path: "/forum",
     name: "forum",
     component: forum,
+  },
+  {
+    path: "/forum/:id",
+    name: "detailForum",
+    component: detailForum,
   },
   {
     path: "/profil/:id",
