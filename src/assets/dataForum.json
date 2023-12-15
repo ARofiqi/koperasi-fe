@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Ahmad Rofiqi",
+    "email": "ahmadrofiqi333@gmail.com",
+    "description": "Lorem ipsum dolor sit amet, eveniet placeat, quis neque laboriosam quae doloribus"
+  },
+  {
+    "name": "John Doe_2",
+    "email": "john.doe2@example.com",
+    "description": "Random description 2 for John Doe"
+  },
+  {
+    "name": "Alice Johnson_3",
+    "email": "alice.johnson3@example.com",
+    "description": "Random description 3 for Alice Johnson"
+  },
+  {
+    "name": "Bob Smith_4",
+    "email": "bob.smith4@example.com",
+    "description": "Random description 4 for Bob Smith"
+  },
+  {
+    "name": "Emma Brown_5",
+    "email": "emma.brown5@example.com",
+    "description": "Random description 5 for Emma Brown"
+  },
+  {
+    "name": "Michael Wilson_6",
+    "email": "michael.wilson6@example.com",
+    "description": "Random description 6 for Michael Wilson"
+  },
+  {
+    "name": "Sophia Davis_7",
+    "email": "sophia.davis7@example.com",
+    "description": "Random description 7 for Sophia Davis"
+  },
+  {
+    "name": "Matthew Anderson_8",
+    "email": "matthew.anderson8@example.com",
+    "description": "Random description 8 for Matthew Anderson"
+  },
+  {
+    "name": "Olivia White_9",
+    "email": "olivia.white9@example.com",
+    "description": "Random description 9 for Olivia White"
+  },
+  {
+    "name": "Daniel Martin_10",
+    "email": "daniel.martin10@example.com",
+    "description": "Random description 10 for Daniel Martin"
+  },
+  {
+    "name": "Grace Robinson_11",
+    "email": "grace.robinson11@example.com",
+    "description": "Random description 11 for Grace Robinson"
+  },
+  {
+    "name": "Ryan Taylor_12",
+    "email": "ryan.taylor12@example.com",
+    "description": "Random description 12 for Ryan Taylor"
+  },
+  {
+    "name": "Ella Moore_13",
+    "email": "ella.moore13@example.com",
+    "description": "Random description 13 for Ella Moore"
+  },
+  {
+    "name": "Jackson Lee_14",
+    "email": "jackson.lee14@example.com",
+    "description": "Random description 14 for Jackson Lee"
+  },
+  {
+    "name": "Ava Harris_15",
+    "email": "ava.harris15@example.com",
+    "description": "Random description 15 for Ava Harris"
+  },
+  {
+    "name": "Liam Clark_16",
+    "email": "liam.clark16@example.com",
+    "description": "Random description 16 for Liam Clark"
+  }
+]

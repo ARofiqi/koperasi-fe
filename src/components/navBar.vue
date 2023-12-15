@@ -8,9 +8,9 @@
       <font-awesome-icon :icon="['far', 'note-sticky']" />
       Pesanan
     </router-link>
-    <router-link :to="{ name: 'notification' }" :class="{ active: isActive('/notification') }" class="flex flex-col grow text-center p-3">
+    <router-link :to="{ name: 'forum' }" :class="{ active: isActive('/forum') }" class="flex flex-col grow text-center p-3">
       <font-awesome-icon :icon="['fas', 'bell']" />
-      Notification
+      Forum
     </router-link>
     <router-link :to="{ name: 'profil', params: { id: '1' } }" :class="{ active: isActive('/profil') }" class="flex flex-col grow text-center p-3">
       <font-awesome-icon :icon="['fas', 'user']" />

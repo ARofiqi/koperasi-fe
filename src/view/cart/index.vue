@@ -1,7 +1,7 @@
 <template>
   <div class="p-3 pb-5 bg-primary rounded-b-xl shadow-lg">
     <Back class="text-white" />
-    <h2 class="text-center text-white text-2xl font-light">Halaman Cart</h2>
+    <h2 class="text-center text-white text-2xl font-light">Halaman Pesanan</h2>
   </div>
   <div class="p-3 pb-20">
     <div class="list-card mt-3 flex flex-col gap-2">

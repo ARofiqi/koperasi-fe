@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import homepage from "@/view/home/index.vue";
-import notification from "@/view/notification/index.vue";
+import forum from "@/view/forum/index.vue";
 import setting from "@/view/setting/index.vue";
 import product from "@/view/product/index.vue";
 import cart from "@/view/cart/index.vue";
@@ -34,9 +34,9 @@ const routes = [
     component: signupPage,
   },
   {
-    path: "/notification",
-    name: "notification",
-    component: notification,
+    path: "/forum",
+    name: "forum",
+    component: forum,
   },
   {
     path: "/profil/:id",
