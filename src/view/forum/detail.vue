@@ -4,13 +4,11 @@
       <ellipse cx="11.5" cy="285" rx="338.5" ry="445" fill="#02B0FF" />
     </g>
   </svg>
-
   <div class="p-3 text-white flex justify-between items-center">
     <Back />
     <img src="/profil.jpg" alt="profil" class="w-8 h-8 rounded-full shadow-xl" />
   </div>
-
-  <div class="bg-white mx-3 shadow-2xl" v-if="data">
+  <div class="bg-white mx-3 mb-20 shadow-2xl" v-if="data">
     <div class="flex items-center justify-between p-3">
       <div class="flex items-center gap-3">
         <img src="/profil.jpg" alt="profil" class="w-10 h-10 rounded-full shadow-xl" />
@@ -36,6 +34,10 @@
       </div>
     </div>
   </div>
+  <div class="fixed z-40 bottom-12 bg-gray-200 w-full p-3 pb-10 flex items-center gap-3">
+    <input type="text" v-model="newComment" @keypress.enter="sendComment" class="bg-inherit border-gray-400 text-gray-600 border-2 grow p-2" />
+    <font-awesome-icon @click="sendComment" class="w-6 h-6 text-gray-400" :icon="['fas', 'arrow-right']" />
+  </div>
 </template>
 
 <script>
@@ -48,6 +50,7 @@ export default {
     return {
       data: null,
       comment: null,
+      newComment: null,
     };
   },
   components: {
@@ -61,6 +64,9 @@ export default {
     },
     getComment() {
       this.comment = this.data.comment;
+    },
+    sendComment() {
+      alert(this.newComment);
     },
   },
   mounted() {

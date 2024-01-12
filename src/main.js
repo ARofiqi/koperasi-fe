@@ -58,6 +58,6 @@ library.add(
   faWhatsapp,
   faLock,
   faTrashCan,
-  faCamera
+  faCamera,
 );
 createApp(App).use(router).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

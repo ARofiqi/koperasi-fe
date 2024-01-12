@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+import navbar from "@/components/navbar.vue";
+
 import homepage from "@/view/home/index.vue";
 
 import forum from "@/view/forum/index.vue";
@@ -20,81 +22,166 @@ import settingShare from "@/view/setting/share.vue";
 import settingSupport from "@/view/setting/support.vue";
 import settingLogout from "@/view/setting/logout.vue";
 
+import adminDashboard from "@/view/admin/dashboard/index.vue";
+import navbarAdmin from "@/components/admin/navbar.vue";
+import ADUser from "@/view/admin/view/user/index.vue";
+import ADTransaction from "@/view/admin/view/transaction/index.vue";
+import ADCashflow from "@/view/admin/view/cashflow/index.vue";
+import ADInventory from "@/view/admin/view/inventory/index.vue";
+
 const routes = [
   {
     path: "/",
     name: "homepage",
-    component: homepage,
+    components: {
+      main: homepage,
+      navbar: navbar,
+    },
   },
   {
     path: "/login",
     name: "login",
-    component: loginPage,
+    components: {
+      main: loginPage,
+    },
   },
   {
     path: "/signup",
     name: "signup",
-    component: signupPage,
+    components: {
+      main: signupPage,
+    },
   },
   {
     path: "/forum",
     name: "forum",
-    component: forum,
+    components: {
+      main: forum,
+      navbar: navbar,
+    },
   },
   {
     path: "/forum/:id",
     name: "detailForum",
-    component: detailForum,
+    components: {
+      main: detailForum,
+      navbar: navbar,
+    },
   },
   {
     path: "/profil/:id",
     name: "profil",
-    component: profil,
+    components: {
+      main: profil,
+      navbar: navbar,
+    },
   },
   {
     path: "/profil/:id/edit",
     name: "profilEdit",
-    component: profilEdit,
+    components: {
+      main: profilEdit,
+      navbar: navbar,
+    },
   },
   {
     path: "/setting",
     name: "setting",
-    component: setting,
+    components: {
+      main: setting,
+    },
   },
   {
     path: "/setting/profil/:id",
     name: "settingProfil",
-    component: settingProfil,
+    components: {
+      main: settingProfil,
+    },
   },
   {
     path: "/setting/location",
     name: "settingLocation",
-    component: settingLocation,
+    components: {
+      main: settingLocation,
+    },
   },
   {
     path: "/setting/logout",
     name: "settingLogout",
-    component: settingLogout,
+    components: {
+      main: settingLogout,
+    },
   },
   {
     path: "/setting/share",
     name: "settingShare",
-    component: settingShare,
+    components: {
+      main: settingShare,
+    },
   },
   {
     path: "/setting/support",
     name: "settingSupport",
-    component: settingSupport,
+    components: {
+      main: settingSupport,
+    },
   },
   {
     path: "/product/:id",
     name: "product",
-    component: product,
+    components: {
+      main: product,
+      navbar: navbar,
+    },
   },
   {
     path: "/cart",
     name: "cart",
-    component: cart,
+    components: {
+      main: cart,
+      navbar: navbar,
+    },
+  },
+  {
+    path: "/dashboard",
+    name: "adminDashboard",
+    components: {
+      main: adminDashboard,
+    },
+    children: [
+      {
+        path: "/dashboard/user",
+        name: "ADUser",
+        components: {
+          main: ADUser,
+          navbar: navbarAdmin,
+        },
+      },
+      {
+        path: "/dashboard/cashflow",
+        name: "ADCashflow",
+        components: {
+          main: ADCashflow,
+          navbar: navbarAdmin,
+        },
+      },
+      {
+        path: "/dashboard/transaction",
+        name: "ADTransaction",
+        components: {
+          main: ADTransaction,
+          navbar: navbarAdmin,
+        },
+      },
+      {
+        path: "/dashboard/inventory",
+        name: "ADInventory",
+        components: {
+          main: ADInventory,
+          navbar: navbarAdmin,
+        },
+      },
+    ],
   },
 ];
 
