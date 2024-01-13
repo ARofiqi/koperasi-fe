@@ -14,7 +14,7 @@
         </div>
         <div class="text-right">
           <p class="text-3xl font-semibold">{{ formatRupiah(this.product.price) }}</p>
-          <p v-if="quantity > 1">{{ formatRupiah(this.product.price) }} x {{ this.quantity }}= {{ formatRupiah(this.quantity * this.product.price) }}</p>
+          <p v-if="quantity > 1">{{ formatRupiah(this.product.price) }} x {{ this.quantity }} = {{ formatRupiah(this.quantity * this.product.price) }}</p>
         </div>
       </div>
       <div class="border-b-2 border-solid border-gray-400 pb-3">
