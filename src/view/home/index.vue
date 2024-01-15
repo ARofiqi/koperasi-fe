@@ -39,6 +39,8 @@
 <script>
 import ProductList from "@/components/productList.vue";
 import dataProduct from "@/assets/dataProduct.json";
+// import axiosInstance from "../../axios";
+import axios from "axios";
 
 export default {
   name: "homePage",
@@ -56,6 +58,16 @@ export default {
     goToProfil() {
       this.$router.push({ name: "profil", params: { id: "1" } });
     },
+    fetchData() {
+      axios
+        .get("http://localhost:8000/")
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    },
   },
   computed: {
     searchProducts() {
@@ -72,6 +84,9 @@ export default {
         return this.data;
       }
     },
+  },
+  mounted() {
+    this.fetchData();
   },
 };
 </script>

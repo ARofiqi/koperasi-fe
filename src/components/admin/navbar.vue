@@ -8,6 +8,7 @@
       </div>
     </div>
     <nav class="flex flex-col gap-10 mt-20 font-semibold">
+      <router-link :to="{ name: 'adminDashboard' }" :class="{ active: $route.path === '/dashboard' }" class="px-6 py-3">Home</router-link>
       <router-link :to="{ name: 'ADUser' }" :class="{ active: isActive('/dashboard/user') }" class="px-6 py-3">User</router-link>
       <router-link :to="{ name: 'ADTransaction' }" :class="{ active: isActive('/dashboard/transaction') }" class="px-6 py-3">Transaction</router-link>
       <router-link :to="{ name: 'ADInventory' }" :class="{ active: isActive('/dashboard/inventory') }" class="px-6 py-3">Inventory</router-link>

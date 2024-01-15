@@ -69,19 +69,20 @@ export default {
     },
     delete(id) {
       Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
+        title: "Apakah Anda Yakin?",
+        text: "Anda tidak akan dapat mengembalikannya!",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!",
+        confirmButtonText: "Yah, saya yakin!",
+        cancelButtonText: "Tidak!",
       }).then((result) => {
         if (result.isConfirmed) {
-          this.data = this.data.filter((item) => item.id !== id);
+          this.data = this.data.filter((item) => item.id !== id); // ubah menjadi code menghapus product dari cart
           Swal.fire({
             title: "Deleted!",
-            text: "Your Product has been deleted.",
+            text: "Produk Berhasil Dihapus dari pesanan.",
             icon: "success",
           });
         }
