@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "Abdurrahman",
+    "email": "Abdurrahman12@gmail.com",
+    "noTelephone": "0812345678",
+    "saldo": 350000,
+    "pemasukan": 400000,
+    "pengeluaran": 40000,
+    "mostProduct": ["1", "3", "2"]
+  },
+  {
+    "id": "2",
+    "name": "Budi",
+    "email": "Budi34@gmail.com",
+    "noTelephone": "0876543210",
+    "saldo": 500000,
+    "pemasukan": 300000,
+    "pengeluaran": 200000,
+    "mostProduct": ["2", "1", "3"]
+  },
+  {
+    "id": "3",
+    "name": "Citra",
+    "email": "Citra56@gmail.com",
+    "noTelephone": "0811122334",
+    "saldo": 750000,
+    "pemasukan": 600000,
+    "pengeluaran": 200000,
+    "mostProduct": ["3", "2", "1"]
+  },
+  {
+    "id": "4",
+    "name": "Dewi",
+    "email": "Dewi78@gmail.com",
+    "noTelephone": "0812345678",
+    "saldo": 420000,
+    "pemasukan": 350000,
+    "pengeluaran": 80000,
+    "mostProduct": ["1", "2", "3"]
+  },
+  {
+    "id": "5",
+    "name": "Eko",
+    "email": "Eko90@gmail.com",
+    "noTelephone": "0876543210",
+    "saldo": 280000,
+    "pemasukan": 200000,
+    "pengeluaran": 120000,
+    "mostProduct": ["2", "3", "1"]
+  }
+]
