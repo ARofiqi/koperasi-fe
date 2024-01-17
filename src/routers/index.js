@@ -6,24 +6,15 @@ import homepage from "@/view/home/index.vue";
 
 import forum from "@/view/forum/index.vue";
 import detailForum from "@/view/forum/detail.vue";
-
-import setting from "@/view/setting/index.vue";
+  
 import product from "@/view/product/index.vue";
 import cart from "@/view/cart/index.vue";
 import loginPage from "@/view/login/index.vue";
 import signupPage from "@/view/signup/index.vue";
 
-import profil from "@/view/profil/index.vue";
-import profilEdit from "@/view/profil/edit.vue";
-
-import settingProfil from "@/view/setting/profil.vue";
-import settingLocation from "@/view/setting/location.vue";
-import settingShare from "@/view/setting/share.vue";
-import settingSupport from "@/view/setting/support.vue";
-import settingLogout from "@/view/setting/logout.vue";
-
-import adminDashboard from "@/view/admin/dashboard/index.vue";
 import dashboard from "./admin.route";
+import setting from "./setting.route";
+import user from "./user.route";
 
 const routes = [
   {
@@ -64,64 +55,7 @@ const routes = [
       navbar: navbar,
     },
   },
-  {
-    path: "/profil/:id",
-    name: "profil",
-    components: {
-      main: profil,
-      navbar: navbar,
-    },
-  },
-  {
-    path: "/profil/:id/edit",
-    name: "profilEdit",
-    components: {
-      main: profilEdit,
-      navbar: navbar,
-    },
-  },
-  {
-    path: "/setting",
-    name: "setting",
-    components: {
-      main: setting,
-    },
-  },
-  {
-    path: "/setting/profil/:id",
-    name: "settingProfil",
-    components: {
-      main: settingProfil,
-    },
-  },
-  {
-    path: "/setting/location",
-    name: "settingLocation",
-    components: {
-      main: settingLocation,
-    },
-  },
-  {
-    path: "/setting/logout",
-    name: "settingLogout",
-    components: {
-      main: settingLogout,
-    },
-  },
-  {
-    path: "/setting/share",
-    name: "settingShare",
-    components: {
-      main: settingShare,
-    },
-  },
-  {
-    path: "/setting/support",
-    name: "settingSupport",
-    components: {
-      main: settingSupport,
-    },
-  },
+  
   {
     path: "/product/:id",
     name: "product",
@@ -138,14 +72,9 @@ const routes = [
       navbar: navbar,
     },
   },
-  {
-    path: "/dashboard",
-    name: "adminDashboard",
-    components: {
-      main: adminDashboard,
-    },
-    children: dashboard,
-  },
+  ...user,
+  ...setting,
+  ...dashboard,
 ];
 
 const router = createRouter({

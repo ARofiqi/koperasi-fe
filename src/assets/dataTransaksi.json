@@ -1,0 +1,163 @@
+[
+  {
+    "id": "TRX001",
+    "tanggal": "2024-01-17",
+    "pelanggan": {
+      "id": "CUST001",
+      "nama": "John Doe"
+    },
+    "barang": [
+      {
+        "id": "BRG001",
+        "nama": "Laptop",
+        "harga": 12000000,
+        "jumlah": 2
+      },
+      {
+        "id": "BRG002",
+        "nama": "Printer",
+        "harga": 3000000,
+        "jumlah": 1
+      }
+    ],
+    "total_harga": 27000000
+  },
+  {
+    "id": "TRX002",
+    "tanggal": "2024-01-18",
+    "pelanggan": {
+      "id": "CUST002",
+      "nama": "Jane Smith"
+    },
+    "barang": [
+      {
+        "id": "BRG003",
+        "nama": "Smartphone",
+        "harga": 8000000,
+        "jumlah": 1
+      },
+      {
+        "id": "BRG004",
+        "nama": "Headset",
+        "harga": 500000,
+        "jumlah": 3
+      }
+    ],
+    "total_harga": 9500000
+  },
+  {
+    "id": "TRX003",
+    "tanggal": "2024-01-19",
+    "pelanggan": {
+      "id": "CUST003",
+      "nama": "Alice Johnson"
+    },
+    "barang": [
+      {
+        "id": "BRG005",
+        "nama": "Camera",
+        "harga": 5000000,
+        "jumlah": 1
+      },
+      {
+        "id": "BRG006",
+        "nama": "Tripod",
+        "harga": 1000000,
+        "jumlah": 2
+      }
+    ],
+    "total_harga": 7000000
+  },
+  {
+    "id": "TRX004",
+    "tanggal": "2024-01-20",
+    "pelanggan": {
+      "id": "CUST004",
+      "nama": "Robert Williams"
+    },
+    "barang": [
+      {
+        "id": "BRG007",
+        "nama": "Tablet",
+        "harga": 3500000,
+        "jumlah": 1
+      },
+      {
+        "id": "BRG008",
+        "nama": "External Hard Drive",
+        "harga": 800000,
+        "jumlah": 3
+      }
+    ],
+    "total_harga": 5100000
+  },
+  {
+    "id": "TRX005",
+    "tanggal": "2024-01-21",
+    "pelanggan": {
+      "id": "CUST005",
+      "nama": "Eva Davis"
+    },
+    "barang": [
+      {
+        "id": "BRG009",
+        "nama": "Smartwatch",
+        "harga": 1500000,
+        "jumlah": 2
+      },
+      {
+        "id": "BRG010",
+        "nama": "Wireless Earbuds",
+        "harga": 500000,
+        "jumlah": 4
+      }
+    ],
+    "total_harga": 4000000
+  },
+  {
+    "id": "TRX006",
+    "tanggal": "2024-01-22",
+    "pelanggan": {
+      "id": "CUST006",
+      "nama": "Michael Brown"
+    },
+    "barang": [
+      {
+        "id": "BRG011",
+        "nama": "Gaming Console",
+        "harga": 6000000,
+        "jumlah": 1
+      },
+      {
+        "id": "BRG012",
+        "nama": "Controller",
+        "harga": 700000,
+        "jumlah": 2
+      }
+    ],
+    "total_harga": 7400000
+  },
+  {
+    "id": "TRX007",
+    "tanggal": "2024-01-23",
+    "pelanggan": {
+      "id": "CUST007",
+      "nama": "Sophia Wilson"
+    },
+    "barang": [
+      {
+        "id": "BRG013",
+        "nama": "Digital Watch",
+        "harga": 900000,
+        "jumlah": 3
+      },
+      {
+        "id": "BRG014",
+        "nama": "Power Bank",
+        "harga": 300000,
+        "jumlah": 5
+      }
+    ],
+    "total_harga": 6000000
+  }
+]

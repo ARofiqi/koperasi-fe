@@ -1,40 +1,55 @@
-import navbarAdmin from "@/components/admin/navbar.vue";
 import ADUser from "@/view/admin/view/user/index.vue";
 import ADTransaction from "@/view/admin/view/transaction/index.vue";
 import ADCashflow from "@/view/admin/view/cashflow/index.vue";
 import ADInventory from "@/view/admin/view/inventory/index.vue";
 
+import adminDashboard from "@/view/admin/dashboard/index.vue";
+
+import ADLogin from "@/view/admin/view/login/index.vue";
+
 const dashboard = [
   {
-    path: "/dashboard/user",
-    name: "ADUser",
+    path: "/dashboard",
+    name: "adminDashboard",
     components: {
-      main: ADUser,
-      navbar: navbarAdmin,
+      main: adminDashboard,
     },
+    children: [
+      {
+        path: "user",
+        name: "ADUser",
+        components: {
+          main: ADUser,
+        },
+      },
+      {
+        path: "cashflow",
+        name: "ADCashflow",
+        components: {
+          main: ADCashflow,
+        },
+      },
+      {
+        path: "transaction",
+        name: "ADTransaction",
+        components: {
+          main: ADTransaction,
+        },
+      },
+      {
+        path: "inventory",
+        name: "ADInventory",
+        components: {
+          main: ADInventory,
+        },
+      },
+    ],
   },
   {
-    path: "/dashboard/cashflow",
-    name: "ADCashflow",
+    path: "/dashboard/login",
+    name: "ADLogin",
     components: {
-      main: ADCashflow,
-      navbar: navbarAdmin,
-    },
-  },
-  {
-    path: "/dashboard/transaction",
-    name: "ADTransaction",
-    components: {
-      main: ADTransaction,
-      navbar: navbarAdmin,
-    },
-  },
-  {
-    path: "/dashboard/inventory",
-    name: "ADInventory",
-    components: {
-      main: ADInventory,
-      navbar: navbarAdmin,
+      main: ADLogin,
     },
   },
 ];
