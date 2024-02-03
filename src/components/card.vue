@@ -23,7 +23,7 @@ export default {
   name: "Card",
   props: {
     id: {
-      type: String,
+      type: Number,
     },
     name: {
       type: String,

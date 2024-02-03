@@ -6,7 +6,7 @@
     "category": "sembako",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 4,
-    "quantity":100
+    "quantity": 100
   },
   {
     "id": "2",
@@ -15,7 +15,7 @@
     "category": "pangan",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 2,
-    "quantity":300
+    "quantity": 300
   },
   {
     "id": "3",
@@ -24,7 +24,7 @@
     "category": "pangan",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 5,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "4",
@@ -33,7 +33,7 @@
     "category": "sembako",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 3,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "5",
@@ -42,7 +42,7 @@
     "category": "minuman",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 4,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "6",
@@ -51,7 +51,7 @@
     "category": "pangan",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 5,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "7",
@@ -60,7 +60,7 @@
     "category": "kebutuhan rumah tangga",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 3,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "8",
@@ -69,7 +69,7 @@
     "category": "minuman",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 4,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "9",
@@ -78,7 +78,7 @@
     "category": "minuman",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 4,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "10",
@@ -87,7 +87,7 @@
     "category": "kebutuhan rumah tangga",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 3,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "11",
@@ -96,7 +96,7 @@
     "category": "pangan",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 4,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "12",
@@ -105,7 +105,7 @@
     "category": "kebutuhan rumah tangga",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 4,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "13",
@@ -114,7 +114,7 @@
     "category": "pangan",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 5,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "14",
@@ -123,7 +123,7 @@
     "category": "kebutuhan rumah tangga",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 3,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "15",
@@ -132,7 +132,7 @@
     "category": "minuman",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 5,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "16",
@@ -141,7 +141,7 @@
     "category": "kebutuhan rumah tangga",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 3,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "17",
@@ -150,7 +150,7 @@
     "category": "snack",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 4,
-    "quantity":600
+    "quantity": 600
   },
   {
     "id": "18",
@@ -159,6 +159,6 @@
     "category": "kebutuhan rumah tangga",
     "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veritatis corrupti soluta voluptatum facilis, sit blanditiis architecto illo ipsam unde itaque dolorem. ",
     "rating": 5,
-    "quantity":600
+    "quantity": 600
   }
 ]

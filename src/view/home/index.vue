@@ -38,14 +38,13 @@
 
 <script>
 import ProductList from "@/components/productList.vue";
-import dataProduct from "@/assets/dataProduct.json";
 import axiosInstance from "@/axios.js";
 
 export default {
   name: "homePage",
   data() {
     return {
-      data: dataProduct,
+      data: [],
       search: "",
       selectedCategory: "",
     };
@@ -61,10 +60,10 @@ export default {
       axiosInstance
         .get("/api/homepage")
         .then((result) => {
-          console.log(result[0]);
+          this.data = result[0].payload.data;
         })
         .catch((err) => {
-          console.log(err);
+          console.err("Error : ", err);
         });
     },
   },
