@@ -4,11 +4,11 @@
     <form @submit.prevent="login" class="w-1/3">
       <div class="grid grid-cols-2 p-3">
         <label for="username"> username </label>
-        <input type="text" v-model="user.username" />
+        <input type="text" v-model="user.username" required />
       </div>
       <div class="grid grid-cols-2 p-3">
         <label for="password"> password </label>
-        <input type="password" v-model="user.password" />
+        <input type="password" v-model="user.password" required />
       </div>
       <button type="submit" class="m-3 py-1 px-3 bg-blue-600 rounded-lg text-white">Login</button>
     </form>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import axiosInstance from "@/axios";
 export default {
   data() {
     return {
@@ -27,7 +28,14 @@ export default {
   },
   methods: {
     login() {
-      console.log(this.user);
+      axiosInstance
+        .post("/api/login", this.user)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
   },
 };

@@ -8,7 +8,7 @@
     <h2 class="font-semibold text-5xl text-white absolute top-20 left-7">Selamat<br />Datang</h2>
   </div>
   <div class="flex flex-col items-center gap-5">
-    <form action="/api/login" class="flex flex-col gap-3 w-full px-5">
+    <form @submit.prevent="login" class="flex flex-col gap-3 w-full px-5">
       <div>
         <input name="username" v-model="username" type="text" id="username" placeholder="username" @focus="clearUsernameMessage" class="w-full py-2 px-4 text-xl rounded-full block border-2 border-gray-700 border-solid" required />
         <ErrorInput massage="Username harus diisi" v-if="!username && focused.username" />
@@ -40,6 +40,8 @@
 import { Form, Field, ErrorMessage } from "vee-validate";
 import Or from "@/components/or.vue";
 import ErrorInput from "@/components/errorInput.vue";
+import axiosInstance from "@/axios";
+
 export default {
   name: "LoginPage",
   data() {
@@ -69,23 +71,16 @@ export default {
     toggleShowPassword() {
       this.showPassword = !this.showPassword;
     },
-    submitForm() {
-      if (this.formIsValid) {
-        // Lakukan logika login di sini
-        // Misalnya, Anda dapat membuat permintaan HTTP menggunakan Axios untuk mengirim data login ke server
-        // dan menanggapi pesan hasil login
-        // Contoh:
-        // axios.post('/api/login', { username: this.username, password: this.password })
-        //     .then(response => {
-        //         this.loginMessage = response.data.message;
-        //     })
-        //     .catch(error => {
-        //         this.loginMessage = 'Login gagal. Periksa kembali username dan password.';
-        //     });
-        this.loginMessage = "Login berhasil!";
-      } else {
-        this.loginMessage = "Username dan password harus diisi.";
-      }
+    login() {
+      const data = { username: this.username, password: this.password };
+      axiosInstance
+        .post("/api/login", data)
+        .then((result) => {
+          console.log("Hasil : ", result);
+        })
+        .catch((err) => {
+          console.log("Error : ", err);
+        });
     },
     clearUsernameMessage() {
       this.focused.username = true;
