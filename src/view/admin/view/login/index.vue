@@ -27,14 +27,17 @@ export default {
     };
   },
   methods: {
-    login() {
+    async login() {
       axiosInstance
-        .post("/api/login", this.user)
+        .post("/api/admin/login", this.user)
         .then((result) => {
-          console.log(result);
+          const token = result.token;
+          localStorage.setItem("token", token);
+
+          this.$router.push("/dashboard");
         })
         .catch((err) => {
-          console.log(err);
+          console.error(err);
         });
     },
   },

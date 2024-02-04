@@ -2,6 +2,7 @@ import ADUser from "@/view/admin/view/user/index.vue";
 import ADTransaction from "@/view/admin/view/transaction/index.vue";
 import ADCashflow from "@/view/admin/view/cashflow/index.vue";
 import ADInventory from "@/view/admin/view/inventory/index.vue";
+import ADMain from "@/view/admin/view/home/index.vue";
 
 import adminDashboard from "@/view/admin/dashboard/index.vue";
 
@@ -15,6 +16,13 @@ const dashboard = [
       main: adminDashboard,
     },
     children: [
+      {
+        path: "/dashboard/",
+        name: "ADMain",
+        components: {
+          main: ADMain,
+        },
+      },
       {
         path: "user",
         name: "ADUser",
