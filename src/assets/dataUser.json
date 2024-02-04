@@ -7,7 +7,7 @@
     "saldo": 350000,
     "pemasukan": 400000,
     "pengeluaran": 40000,
-    "mostProduct": ["1", "3", "2"]
+    "mostProduct": "1,3,2"
   },
   {
     "id": "2",
@@ -17,7 +17,7 @@
     "saldo": 500000,
     "pemasukan": 300000,
     "pengeluaran": 200000,
-    "mostProduct": ["2", "1", "3"]
+    "mostProduct": "2,1,3"
   },
   {
     "id": "3",
@@ -27,7 +27,7 @@
     "saldo": 750000,
     "pemasukan": 600000,
     "pengeluaran": 200000,
-    "mostProduct": ["3", "2", "1"]
+    "mostProduct": "3,2,1"
   },
   {
     "id": "4",
@@ -37,7 +37,7 @@
     "saldo": 420000,
     "pemasukan": 350000,
     "pengeluaran": 80000,
-    "mostProduct": ["1", "2", "3"]
+    "mostProduct": "1,2,3"
   },
   {
     "id": "5",

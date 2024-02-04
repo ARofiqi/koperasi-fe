@@ -37,7 +37,7 @@
       </div>
       <div class="pt-5">
         <h3 class="font-bold">Produk Yang Sering Dibeli</h3>
-        <ProductList :dataList="mostProduct" />
+        <ProductList :dataList="dataUser.mostProduct" />
       </div>
     </div>
   </div>
@@ -46,35 +46,20 @@
 <script>
 import Chart from "@/components/chart.vue";
 import ProductList from "@/components/productList.vue";
-import dataProduct from "@/assets/dataProduct.json";
-import dataProfil from "@/assets/dataProfil.json";
+import axiosInstance from "@/axios.js";
+
 export default {
   name: "ProfilPage",
   data() {
     return {
-      data: dataProduct,
-      dataUser: dataProfil,
-      mostProduct: [],
+      dataUser: [],
     };
   },
   components: {
     ProductList,
     Chart,
   },
-  created() {
-    this.createNewDataList();
-  },
   methods: {
-    createNewDataList() {
-      const listId = this.dataUser.mostProduct;
-      listId.forEach((id) => {
-        this.data.forEach((item) => {
-          if (item.id === id) {
-            this.mostProduct.push(item);
-          }
-        });
-      });
-    },
     formatRupiah(num) {
       const formatter = new Intl.NumberFormat("id-ID", {
         style: "currency",
@@ -83,6 +68,21 @@ export default {
 
       return formatter.format(num);
     },
+    fetch() {
+      const id = this.$route.params.id;
+      axiosInstance
+        .get(`/api/user/${id}`)
+        .then((result) => {
+          this.dataUser = result[0].payload.data[0];
+          console.log(this.dataUser);
+        })
+        .catch((err) => {
+          console.err(err);
+        });
+    },
+  },
+  mounted() {
+    this.fetch();
   },
 };
 </script>

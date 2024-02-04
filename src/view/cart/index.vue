@@ -32,7 +32,7 @@
     <div class="p-3 flex items-center">
       <p class="text-white">Total = {{ formatRupiah(totalPrice) }}</p>
     </div>
-    <Button class="bg-red-600 text-white border-none flex items-center px-2"> Check Out </Button>
+    <button class="bg-red-600 text-white border-none flex items-center px-2"> Check Out </button>
   </div>
 </template>
 
