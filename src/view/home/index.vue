@@ -31,7 +31,7 @@
       </div>
       <ProductList :dataList="filteredProducts" v-if="selectedCategory" />
       <ProductList :dataList="searchProducts" v-else-if="search" />
-      <ProductList :dataList="data" v-else />
+      <ProductList :dataList="paginatedData" v-else />
     </div>
   </div>
 </template>
@@ -47,6 +47,8 @@ export default {
       data: [],
       search: "",
       selectedCategory: "",
+      currentPage: 1,
+      itemsPerPage: 6,
     };
   },
   components: {
@@ -56,11 +58,12 @@ export default {
     goToProfil() {
       this.$router.push({ name: "profil", params: { id: "1" } });
     },
-    fetchData() {
+    fetch() {
       axiosInstance
         .get("/api/homepage")
         .then((result) => {
-          this.data = result[0].payload.data;
+          this.data = result.data;
+          this.dataFiltered = result.data;
         })
         .catch((err) => {
           console.err("Error : ", err);
@@ -82,9 +85,32 @@ export default {
         return this.data;
       }
     },
+    totalPages() {
+      return Math.ceil(this.data.length / this.itemsPerPage);
+    },
+    paginatedData() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      const end = start + this.itemsPerPage;
+      return this.data.slice(start, end);
+    },
   },
-  mounted() {
-    this.fetchData();
+  created() {
+    this.fetch();
+  },
+  beforeRouteEnter(to, from, next) {
+    const token = localStorage.getItem("token");
+    axiosInstance
+      .get("/api/homepage/auth", {
+        headers: { Authorization: token },
+      })
+      .then((result) => {
+        console.log(result);
+        next();
+      })
+      .catch((err) => {
+        next({ path: "/login" });
+        console.error(err);
+      });
   },
 };
 </script>

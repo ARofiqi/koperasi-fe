@@ -87,6 +87,7 @@ export default {
     },
     register() {
       const data = { email: this.email, password: this.password, confirmPassword: this.confirmPassword };
+      console.log(data);
       axiosInstance
         .post("/api/register", data)
         .then((result) => {

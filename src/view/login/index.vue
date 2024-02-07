@@ -10,8 +10,8 @@
   <div class="flex flex-col items-center gap-5">
     <form @submit.prevent="login" class="flex flex-col gap-3 w-full px-5">
       <div>
-        <input name="username" v-model="username" type="text" id="username" placeholder="username" @focus="clearUsernameMessage" class="w-full py-2 px-4 text-xl rounded-full block border-2 border-gray-700 border-solid" required />
-        <ErrorInput massage="Username harus diisi" v-if="!username && focused.username" />
+        <input name="email" v-model="email" type="text" id="email" placeholder="email" @focus="clearEmailMessage" class="w-full py-2 px-4 text-xl rounded-full block border-2 border-gray-700 border-solid" required />
+        <ErrorInput massage="Email harus diisi" v-if="!email && focused.email" />
       </div>
       <div>
         <div class="bg-white w-full py-2 px-4 text-xl rounded-full border-2 border-gray-700 border-solid flex justify-between items-center">
@@ -47,17 +47,17 @@ export default {
   data() {
     return {
       showPassword: false,
-      username: "",
+      email: "",
       password: "",
       focused: {
-        username: false,
+        email: false,
         password: false,
       },
     };
   },
   computed: {
     formIsValid() {
-      return this.username && this.password;
+      return this.email && this.password;
     },
   },
   components: {
@@ -71,19 +71,22 @@ export default {
     toggleShowPassword() {
       this.showPassword = !this.showPassword;
     },
-    login() {
-      const data = { username: this.username, password: this.password };
+    async login() {
+      const data = { email: this.email, password: this.password };
+      console.log(data);
       axiosInstance
         .post("/api/login", data)
         .then((result) => {
-          console.log("Hasil : ", result);
+          const token = result.token;
+          localStorage.setItem("token", token);
+          this.$router.push("/");
         })
         .catch((err) => {
-          console.log("Error : ", err);
+          console.error(err);
         });
     },
-    clearUsernameMessage() {
-      this.focused.username = true;
+    clearEmailMessage() {
+      this.focused.email = true;
     },
     clearPasswordMessage() {
       this.focused.password = true;

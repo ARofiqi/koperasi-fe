@@ -36,7 +36,7 @@ export default {
       axiosInstance
         .get("/api/admin/user")
         .then((result) => {
-          this.data = result[0].payload.data
+          this.data = result.data
         })
         .catch((err) => {
           console.error(err);
