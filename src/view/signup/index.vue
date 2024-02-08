@@ -87,11 +87,10 @@ export default {
     },
     register() {
       const data = { email: this.email, password: this.password, confirmPassword: this.confirmPassword };
-      console.log(data);
       axiosInstance
         .post("/api/register", data)
         .then((result) => {
-          console.log("Hasil : ", result);
+          this.$router.push("/login");
         })
         .catch((err) => {
           console.log("Error : ", err);

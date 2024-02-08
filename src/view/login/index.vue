@@ -73,7 +73,6 @@ export default {
     },
     async login() {
       const data = { email: this.email, password: this.password };
-      console.log(data);
       axiosInstance
         .post("/api/login", data)
         .then((result) => {
@@ -81,9 +80,7 @@ export default {
           localStorage.setItem("token", token);
           this.$router.push("/");
         })
-        .catch((err) => {
-          console.error(err);
-        });
+        .catch(() => {});
     },
     clearEmailMessage() {
       this.focused.email = true;

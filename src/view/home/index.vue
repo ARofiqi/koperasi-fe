@@ -59,14 +59,19 @@ export default {
       this.$router.push({ name: "profil", params: { id: "1" } });
     },
     fetch() {
+      const token = localStorage.getItem("token");
       axiosInstance
-        .get("/api/homepage")
+        .get("/api/homepage", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
         .then((result) => {
           this.data = result.data;
           this.dataFiltered = result.data;
         })
-        .catch((err) => {
-          console.err("Error : ", err);
+        .catch(() => {
+          this.$router.push("/login");
         });
     },
   },
@@ -103,13 +108,11 @@ export default {
       .get("/api/homepage/auth", {
         headers: { Authorization: token },
       })
-      .then((result) => {
-        console.log(result);
+      .then(() => {
         next();
       })
-      .catch((err) => {
+      .catch(() => {
         next({ path: "/login" });
-        console.error(err);
       });
   },
 };

@@ -3,7 +3,6 @@ import settingProfil from "@/view/setting/profil.vue";
 import settingLocation from "@/view/setting/location.vue";
 import settingShare from "@/view/setting/share.vue";
 import settingSupport from "@/view/setting/support.vue";
-import settingLogout from "@/view/setting/logout.vue";
 
 const setting = [
   {
@@ -25,13 +24,6 @@ const setting = [
     name: "settingLocation",
     components: {
       main: settingLocation,
-    },
-  },
-  {
-    path: "/setting/logout",
-    name: "settingLogout",
-    components: {
-      main: settingLogout,
     },
   },
   {

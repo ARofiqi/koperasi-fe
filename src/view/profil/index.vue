@@ -37,7 +37,7 @@
       </div>
       <div class="pt-5">
         <h3 class="font-bold">Produk Yang Sering Dibeli</h3>
-        <ProductList :dataList="dataUser.mostProduct" />
+        <!-- <ProductList :dataList="dataUser.mostProduct" /> -->
       </div>
     </div>
   </div>
@@ -77,7 +77,7 @@ export default {
           console.log(this.dataUser);
         })
         .catch((err) => {
-          console.err(err);
+          console.error(err);
         });
     },
   },

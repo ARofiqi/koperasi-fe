@@ -28,9 +28,7 @@
     <router-link :to="{ name: 'settingShare' }">
       <CardSetting :title="'Share'" :icon="['fas', 'share']" />
     </router-link>
-    <router-link :to="{ name: 'settingLogout' }">
-      <CardSetting :title="'Logout'" :icon="['fas', 'right-from-bracket']" />
-    </router-link>
+    <CardSetting :title="'Logout'" :icon="['fas', 'right-from-bracket']" @click="logout" />
   </div>
 </template>
 
@@ -42,6 +40,16 @@ export default {
   components: {
     CardSetting,
     Back,
+  },
+  methods: {
+    logout() {
+      try {
+        localStorage.removeItem("token");
+        this.$router.push("/login");
+      } catch (err) {
+        console.log(err);
+      }
+    },
   },
 };
 </script>
