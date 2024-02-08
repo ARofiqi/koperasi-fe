@@ -1,6 +1,5 @@
 import axios from "axios";
 
-// const baseURL = "https://dummyjson.com/";
 // const baseURL = "https://gjzddcw2-8000.asse.devtunnels.ms/";
 const baseURL = "http://localhost:8000";
 

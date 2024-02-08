@@ -35,9 +35,9 @@
           <p class="text-red-600 font-bold">{{ formatRupiah(dataUser.pengeluaran) }}</p>
         </div>
       </div>
-      <div class="pt-5">
+      <div class="pt-5" v-if="dataUser.mostProduct">
         <h3 class="font-bold">Produk Yang Sering Dibeli</h3>
-        <!-- <ProductList :dataList="dataUser.mostProduct" /> -->
+        <ProductList :dataList="dataUser.mostProduct" />
       </div>
     </div>
   </div>
@@ -69,16 +69,17 @@ export default {
       return formatter.format(num);
     },
     fetch() {
-      const id = this.$route.params.id;
+      const token = localStorage.getItem("token");
       axiosInstance
-        .get(`/api/user/${id}`)
-        .then((result) => {
-          this.dataUser = result[0].payload.data[0];
-          console.log(this.dataUser);
+        .get(`/api/user/`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         })
-        .catch((err) => {
-          console.error(err);
-        });
+        .then((result) => {
+          this.dataUser = result.data[0];
+        })
+        .catch(() => {});
     },
   },
   mounted() {
