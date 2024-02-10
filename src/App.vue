@@ -5,7 +5,22 @@
   </div>
 </template>
 
-<script setup>
+<script>
+export default {
+  beforeRouteEnter(to, from, next) {
+    const token = localStorage.getItem("token");
+    axiosInstance
+      .get("/api/user/auth", {
+        headers: { Authorization: token },
+      })
+      .then((result) => {
+        next();
+      })
+      .catch((err) => {
+        next({ path: "/login" });
+      });
+  },
+};
 </script>
 
 <style scoped>

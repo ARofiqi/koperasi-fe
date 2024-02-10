@@ -6,9 +6,10 @@ import homepage from "@/view/home/index.vue";
 
 import forum from "@/view/forum/index.vue";
 import detailForum from "@/view/forum/detail.vue";
-  
+
 import product from "@/view/product/index.vue";
 import cart from "@/view/cart/index.vue";
+import checkout from "@/view/cart/checkout.vue";
 import loginPage from "@/view/login/index.vue";
 import signupPage from "@/view/signup/index.vue";
 
@@ -55,7 +56,7 @@ const routes = [
       navbar: navbar,
     },
   },
-  
+
   {
     path: "/product/:id",
     name: "product",
@@ -70,6 +71,13 @@ const routes = [
     components: {
       main: cart,
       navbar: navbar,
+    },
+  },
+  {
+    path: "/checkout",
+    name: "checkout",
+    components: {
+      main: checkout,
     },
   },
   ...user,

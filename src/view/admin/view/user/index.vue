@@ -36,7 +36,7 @@ export default {
       axiosInstance
         .get("/api/admin/user")
         .then((result) => {
-          this.data = result.data
+          this.data = result.data;
         })
         .catch((err) => {
           console.error(err);
@@ -45,6 +45,19 @@ export default {
   },
   mounted() {
     this.fetch();
+  },
+  beforeRouteEnter(to, from, next) {
+    const token = localStorage.getItem("token");
+    axiosInstance
+      .get("/api/admin/auth", {
+        headers: { Authorization: token },
+      })
+      .then((result) => {
+        next();
+      })
+      .catch((err) => {
+        next({ path: "/dashboard/login" });
+      });
   },
 };
 </script>

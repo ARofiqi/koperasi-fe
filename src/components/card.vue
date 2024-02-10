@@ -18,6 +18,7 @@
 
 <script>
 import Swal from "sweetalert2";
+import axiosInstance from "../axios";
 
 export default {
   name: "Card",
@@ -35,12 +36,75 @@ export default {
     },
     category: {
       type: String,
-      default: "Unknows"
-    }
+      default: "Unknows",
+    },
   },
   methods: {
-    addToCart: () => {
-      Swal.fire("Product berhasil ditambahkan ke keranjang");
+    addToCart() {
+      const token = localStorage.getItem("token");
+      Swal.fire({
+        title: "Masukan Jumlah Barang",
+        html: `
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col justify-center items-left gap-3">
+            <input type="number" name="quantity" id="quantity" class="bg-inherit p-3 border-2 border-gray-300 border-solid" required>
+          </div>
+        </div>
+  `,
+        inputAttributes: {
+          autocapitalize: "off",
+        },
+        showCancelButton: true,
+        cancelButtonColor: "#F31D10",
+        confirmButtonText: "Tambah",
+        confirmButtonColor: "#3085d6",
+        showLoaderOnConfirm: true,
+        preConfirm: async () => {
+          const popup = Swal.getPopup();
+          const quantity = popup.querySelector("#quantity").value;
+
+          const errors = {};
+
+          if (!quantity || isNaN(Number(quantity)) || quantity < 0) {
+            errors.quantity = "Jumlah Perlu Diisi";
+          }
+
+          axiosInstance
+            .post("/api/cart", {
+              headers: {
+                Authorization: `Bearer ${token}`,
+                product_id: this.id,
+                quantity: quantity,
+              },
+            })
+            .then((result) => {
+              const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: false,
+              });
+              Toast.fire({
+                icon: "success",
+                title: "Berhasil Menambahkan Produk",
+              });
+            })
+            .catch(() => {
+              const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: false,
+              });
+              Toast.fire({
+                icon: "error",
+                title: "Gagal Menambahkan Produk",
+              });
+            });
+        },
+      });
     },
     handleImageError(event) {
       event.target.src = "/foto produk/unknow.png";

@@ -415,7 +415,6 @@ export default {
           console.error(err);
         });
     },
-    // fetchByUrl(url) {
     //   axiosInstance
     //     .get(url)
     //     .then((result) => {
@@ -487,7 +486,6 @@ export default {
   },
   created() {
     this.fetch();
-    // this.fetchByUrl(`/api/admin/inventory?page=${this.currentPage}`);
   },
 };
 </script>
